@@ -18,14 +18,36 @@ namespace API.Controllers
             _context = context;
         }
 
-        // ✅ Ai cũng có thể xem danh sách (hoặc sau này muốn chỉ admin thì thêm [Authorize] cũng được)
+        // ✅ Ai cũng có thể xem danh sách
         [HttpGet]
         public async Task<ActionResult<IEnumerable<NhanVien>>> GetAll()
         {
             return await _context.NhanViens.ToListAsync();
         }
 
-        // ✅ Ai cũng có thể xem chi tiết
+        // ✅ Lấy theo mã nhân viên (dùng cho WinForms – nhập MaNhanVien)
+        // GET: api/NhanVien/by-code/{maNhanVien}
+        [HttpGet("by-code/{maNhanVien}")]
+        [AllowAnonymous] // hoặc bỏ nếu muốn yêu cầu token
+        public async Task<ActionResult<NhanVien>> GetByMaNhanVien(string maNhanVien)
+        {
+            if (string.IsNullOrWhiteSpace(maNhanVien))
+            {
+                return BadRequest("Mã nhân viên không hợp lệ");
+            }
+
+            var nv = await _context.NhanViens
+                .FirstOrDefaultAsync(x => x.MaNhanVien == maNhanVien);
+
+            if (nv == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(nv);
+        }
+
+        // ✅ Ai cũng có thể xem chi tiết theo Id
         [HttpGet("{id:int}")]
         public async Task<ActionResult<NhanVien>> GetById(int id)
         {
@@ -46,7 +68,6 @@ namespace API.Controllers
                 MaNhanVien = dto.MaNhanVien,
                 HoTen = dto.HoTen,
                 VaiTro = dto.VaiTro,
-                // TenDangNhap / MatKhauHash: nếu bạn muốn admin tạo luôn account cho NV
             };
 
             _context.NhanViens.Add(nv);
