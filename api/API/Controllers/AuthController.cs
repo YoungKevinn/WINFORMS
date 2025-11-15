@@ -4,6 +4,7 @@ using System.Text;
 using API.DTOs;
 using API.Models;
 using API.Security;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -73,6 +74,39 @@ namespace API.Controllers
             return Ok(token);
         }
 
+        // 🔒 Admin đã đăng nhập mới đổi được mật khẩu
+        [HttpPost("change-password")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ChangePassword(ChangePasswordDto dto)
+        {
+            // Lấy Id admin từ token
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)
+                             ?? User.FindFirst(JwtRegisteredClaimNames.Sub);
+
+            if (userIdClaim == null)
+                return Unauthorized("Không xác định được người dùng từ token.");
+
+            if (!int.TryParse(userIdClaim.Value, out var userId))
+                return Unauthorized("Token không hợp lệ.");
+
+            var user = await _context.NhanViens
+                .FirstOrDefaultAsync(x => x.Id == userId && x.VaiTro == "Admin");
+
+            if (user == null || string.IsNullOrEmpty(user.MatKhauHash))
+                return Unauthorized("Không tìm thấy tài khoản admin.");
+
+            // Kiểm tra mật khẩu cũ
+            var oldOk = PasswordHasher.VerifyPassword(dto.MatKhauCu, user.MatKhauHash);
+            if (!oldOk)
+                return BadRequest("Mật khẩu cũ không đúng.");
+
+            // Tạo hash mới và lưu
+            user.MatKhauHash = PasswordHasher.CreatePasswordHash(dto.MatKhauMoi);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Đổi mật khẩu thành công. Vui lòng đăng nhập lại." });
+        }
+
         private AuthResponseDto GenerateJwtToken(NhanVien user)
         {
             var jwtSection = _config.GetSection("Jwt");
@@ -84,6 +118,7 @@ namespace API.Controllers
             var claims = new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),  // 👈 để change-password lấy Id
                 new Claim(JwtRegisteredClaimNames.UniqueName, user.HoTen),
                 new Claim(ClaimTypes.Name, user.HoTen),
                 new Claim(ClaimTypes.Role, user.VaiTro),               // "Admin"
