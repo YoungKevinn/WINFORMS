@@ -114,7 +114,66 @@ namespace API.Controllers
 
             return NoContent();
         }
+        [HttpPost("{id:int}/thanh-toan")]
+        public async Task<IActionResult> ThanhToanHoaDon(
+    int id,
+    HoaDonThanhToanDto dto,
+    [FromHeader(Name = "X-NguoiThucHien")] string? nguoiThucHien)
+        {
+            var hd = await _context.HoaDons.FindAsync(id);
+            if (hd == null) return NotFound();
 
+            var giaTriCu = JsonSerializer.Serialize(hd);
+
+            // cập nhật trạng thái hoá đơn
+            hd.TongTien = dto.TongTien;
+            hd.GiamGia = dto.GiamGia;
+            hd.Thue = dto.Thue;
+            hd.GhiChu = dto.GhiChu;
+            hd.TrangThai = 1;             // 1 = Paid
+            hd.ClosedAt = DateTime.Now;
+
+            await _context.SaveChangesAsync();
+
+            nguoiThucHien ??= "Unknown";
+            var giaTriMoi = JsonSerializer.Serialize(hd);
+
+            // ghi AuditLog giống các action khác 
+            var log = new AuditLog
+            {
+                TenBang = nameof(HoaDon),
+                IdBanGhi = hd.Id,
+                HanhDong = "ThanhToan",
+                GiaTriCu = giaTriCu,
+                GiaTriMoi = giaTriMoi,
+                NguoiThucHien = nguoiThucHien,
+                ThoiGian = DateTime.Now
+            };
+
+            _context.AuditLogs.Add(log);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+        [HttpGet("filter")]
+        public async Task<ActionResult<IEnumerable<HoaDon>>> GetByDateRange(
+    [FromQuery] DateTime? from,
+    [FromQuery] DateTime? to)
+        {
+            var query = _context.HoaDons.AsQueryable();
+
+            if (from.HasValue)
+                query = query.Where(h => h.CreatedAt >= from.Value);
+
+            if (to.HasValue)
+                query = query.Where(h => h.CreatedAt <= to.Value);
+
+            var data = await query
+                .OrderByDescending(h => h.CreatedAt)
+                .ToListAsync();
+
+            return Ok(data);
+        }
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(
             int id,
@@ -146,5 +205,37 @@ namespace API.Controllers
 
             return NoContent();
         }
+        [HttpGet("{id:int}/chi-tiet")]
+        public async Task<ActionResult<IEnumerable<ChiTietHoaDonDto>>> GetChiTiet(int id)
+        {
+            // id ở đây là DonGoiId (đơn gọi ứng với hoá đơn)
+            var data = await _context.ChiTietDonGois
+                .Where(c => c.DonGoiId == id)
+                .Select(c => new ChiTietHoaDonDto
+                {
+                    Id = c.Id,
+
+                    // Lấy tên món từ ThucUong hoặc ThucAn
+                    TenMon = c.ThucUongId != null && c.ThucUong != null
+                                ? c.ThucUong.Ten        // <-- dùng Ten
+                                : c.ThucAnId != null && c.ThucAn != null
+                                    ? c.ThucAn.Ten      // <-- dùng Ten
+                                    : "Món khác",
+
+                    // Phân loại để sau này WinForms hiển thị
+                    LoaiMon = c.ThucUongId != null ? "Thức uống"
+                             : c.ThucAnId != null ? "Thức ăn"
+                             : "Khác",
+
+                    SoLuong = c.SoLuong,
+                    DonGia = c.DonGia,
+                    ChietKhau = c.ChietKhau,
+                    ThanhTien = c.SoLuong * c.DonGia - c.ChietKhau
+                })
+                .ToListAsync();
+
+            return Ok(data);
+        }
     }
+
 }
