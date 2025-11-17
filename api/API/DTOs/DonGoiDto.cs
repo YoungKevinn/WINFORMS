@@ -8,5 +8,6 @@
         public DateTime MoLuc { get; set; }   // có thể để DateTime.Now ở server nếu default
         public DateTime? DongLuc { get; set; }
         public string? GhiChu { get; set; }
+
     }
 }

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Forms\FormBanHangNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormChonVaiTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormBaoCaoDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormDangNhapAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormNhanVienDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormNhatKyHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormQuanLyBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormQuanLyDanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormQuanLyMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormTraCuuHoaDonAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\FormTrangChuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
