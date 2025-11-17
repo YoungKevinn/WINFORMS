@@ -18,14 +18,12 @@ namespace API.Controllers
             _context = context;
         }
 
-        // ✅ Ai cũng có thể xem danh sách
         [HttpGet]
         public async Task<ActionResult<IEnumerable<NhanVien>>> GetAll()
         {
             return await _context.NhanViens.ToListAsync();
         }
 
-        // ✅ Lấy theo mã nhân viên (dùng cho WinForms – nhập MaNhanVien)
         // GET: api/NhanVien/by-code/{maNhanVien}
         [HttpGet("by-code/{maNhanVien}")]
         [AllowAnonymous] // hoặc bỏ nếu muốn yêu cầu token
@@ -43,6 +41,21 @@ namespace API.Controllers
             {
                 return NotFound();
             }
+
+            var log = new AuditLog
+            {
+                TenBang = nameof(NhanVien),
+                IdBanGhi = nv.Id,
+                HanhDong = "DangNhap",  
+                GiaTriCu = null,
+                GiaTriMoi = null,
+                NguoiThucHien = nv.MaNhanVien, 
+                ThoiGian = DateTime.Now
+            };
+
+            _context.AuditLogs.Add(log);
+            await _context.SaveChangesAsync();
+            // 🔔 HẾT PHẦN GHI LOG
 
             return Ok(nv);
         }

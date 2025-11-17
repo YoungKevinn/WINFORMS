@@ -2,7 +2,10 @@
 using API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace API.Controllers
 {
@@ -17,31 +20,92 @@ namespace API.Controllers
             _context = context;
         }
 
+        /// <summary>
+        /// Tra cứu danh sách hóa đơn theo khoảng thời gian.
+        /// GET /api/hoadon?from=2025-11-01&to=2025-11-16
+        /// </summary>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<HoaDon>>> GetAll()
+        public async Task<ActionResult<IEnumerable<HoaDonDto>>> GetList(
+            [FromQuery] DateTime? from,
+            [FromQuery] DateTime? to)
         {
-            return await _context.HoaDons.ToListAsync();
+            // Khoảng mặc định: 7 ngày gần nhất
+            var toDate = (to ?? DateTime.Today).Date;
+            var fromDate = (from ?? toDate.AddDays(-7)).Date;
+
+            var fromTime = fromDate;
+            var toTime = toDate.AddDays(1).AddTicks(-1); // hết ngày "to"
+
+            var query = _context.HoaDons
+                .Include(h => h.NhanVien)
+                .Include(h => h.Ban)
+                .Where(h => h.CreatedAt >= fromTime && h.CreatedAt <= toTime)
+                .OrderByDescending(h => h.CreatedAt);
+
+            var data = await query
+                .Select(h => new HoaDonDto
+                {
+                    Id = h.Id,
+                    MaHoaDon = h.MaHoaDon ?? string.Empty,
+                    ThoiGian = h.CreatedAt,
+
+                    // 4 trường tiền
+                    TongTien = h.TongTien,
+                    GiamGia = h.GiamGia,
+                    Thue = h.Thue,
+                    ThanhTien = h.TongTien - h.GiamGia + h.Thue,
+
+                    TenNhanVien = h.NhanVien != null ? h.NhanVien.HoTen : null,
+                    TenBan = h.Ban != null ? h.Ban.TenBan : null
+                })
+                .ToListAsync();
+
+            return Ok(data);
         }
 
-        [HttpGet("{id:int}")]
-        public async Task<ActionResult<HoaDon>> GetById(int id)
+        /// <summary>
+        /// Lấy chi tiết hóa đơn (quy ước: Id hóa đơn == Id đơn gọi).
+        /// GET /api/hoadon/{id}/chi-tiet
+        /// </summary>
+        [HttpGet("{id:int}/chi-tiet")]
+        public async Task<ActionResult<IEnumerable<ChiTietHoaDonDto>>> GetChiTiet(int id)
         {
-            var item = await _context.HoaDons.FindAsync(id);
-            if (item == null) return NotFound();
-            return item;
+            // Chi tiết nằm ở bảng ChiTietDonGoi, join với ThucUong / ThucAn để lấy tên món
+            var query = _context.ChiTietDonGois
+                .Include(c => c.ThucUong)
+                .Include(c => c.ThucAn)
+                .Where(c => c.DonGoiId == id);
+
+            var data = await query
+                .Select(c => new ChiTietHoaDonDto
+                {
+                    Id = c.Id,
+                    TenMon = c.ThucUongId != null && c.ThucUong != null
+                        ? c.ThucUong.Ten
+                        : (c.ThucAn != null ? c.ThucAn.Ten : string.Empty),
+                    SoLuong = c.SoLuong,
+                    DonGia = c.DonGia,
+                    ChietKhau = c.ChietKhau,
+                    ThanhTien = c.SoLuong * (c.DonGia - c.ChietKhau),
+                    GhiChu = c.GhiChu
+                })
+                .ToListAsync();
+
+            return Ok(data);
         }
 
+        /// <summary>
+        /// Tạo hóa đơn mới (nếu phía client cần).
+        /// </summary>
         [HttpPost]
-        public async Task<ActionResult<HoaDon>> Create(
-            HoaDonCreateUpdateDto dto,
-            [FromHeader(Name = "X-NguoiThucHien")] string? nguoiThucHien)
+        public async Task<ActionResult<HoaDonDto>> Create([FromBody] HoaDonCreateUpdateDto dto)
         {
-            var item = new HoaDon
+            var entity = new HoaDon
             {
                 MaHoaDon = dto.MaHoaDon,
                 NhanVienId = dto.NhanVienId,
-                BanId = dto.BanId,
-                CreatedAt = dto.CreatedAt == default ? DateTime.Now : dto.CreatedAt,
+                BanId = dto.BanId ?? 0,
+                CreatedAt = dto.CreatedAt,
                 ClosedAt = dto.ClosedAt,
                 TrangThai = dto.TrangThai,
                 TongTien = dto.TongTien,
@@ -50,192 +114,69 @@ namespace API.Controllers
                 GhiChu = dto.GhiChu
             };
 
-            _context.HoaDons.Add(item);
+            _context.HoaDons.Add(entity);
             await _context.SaveChangesAsync();
 
-            nguoiThucHien ??= "Unknown";
+            // nạp navigation để lấy tên NV / tên bàn
+            await _context.Entry(entity).Reference(h => h.NhanVien).LoadAsync();
+            await _context.Entry(entity).Reference(h => h.Ban).LoadAsync();
 
-            var log = new AuditLog
+            var result = new HoaDonDto
             {
-                TenBang = nameof(HoaDon),
-                IdBanGhi = item.Id,
-                HanhDong = "Tao",
-                GiaTriMoi = JsonSerializer.Serialize(item),
-                NguoiThucHien = nguoiThucHien,
-                ThoiGian = DateTime.Now
+                Id = entity.Id,
+                MaHoaDon = entity.MaHoaDon ?? string.Empty,
+                ThoiGian = entity.CreatedAt,
+
+                TongTien = entity.TongTien,
+                GiamGia = entity.GiamGia,
+                Thue = entity.Thue,
+                ThanhTien = entity.TongTien - entity.GiamGia + entity.Thue,
+
+                TenNhanVien = entity.NhanVien?.HoTen,
+                TenBan = entity.Ban?.TenBan
             };
 
-            _context.AuditLogs.Add(log);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetById), new { id = item.Id }, item);
+            return CreatedAtAction(nameof(GetList), new { id = entity.Id }, result);
         }
 
+        /// <summary>
+        /// Cập nhật hóa đơn.
+        /// </summary>
         [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(
-            int id,
-            HoaDonCreateUpdateDto dto,
-            [FromHeader(Name = "X-NguoiThucHien")] string? nguoiThucHien)
+        public async Task<IActionResult> Update(int id, [FromBody] HoaDonCreateUpdateDto dto)
         {
-            var item = await _context.HoaDons.FindAsync(id);
-            if (item == null) return NotFound();
+            var entity = await _context.HoaDons.FindAsync(id);
+            if (entity == null)
+                return NotFound();
 
-            var giaTriCu = JsonSerializer.Serialize(item);
-
-            item.MaHoaDon = dto.MaHoaDon;
-            item.NhanVienId = dto.NhanVienId;
-            item.BanId = dto.BanId;
-            item.CreatedAt = dto.CreatedAt;
-            item.ClosedAt = dto.ClosedAt;
-            item.TrangThai = dto.TrangThai;
-            item.TongTien = dto.TongTien;
-            item.GiamGia = dto.GiamGia;
-            item.Thue = dto.Thue;
-            item.GhiChu = dto.GhiChu;
+            entity.MaHoaDon = dto.MaHoaDon;
+            entity.NhanVienId = dto.NhanVienId;
+            entity.BanId = dto.BanId ?? entity.BanId;
+            entity.CreatedAt = dto.CreatedAt;
+            entity.ClosedAt = dto.ClosedAt;
+            entity.TrangThai = dto.TrangThai;
+            entity.TongTien = dto.TongTien;
+            entity.GiamGia = dto.GiamGia;
+            entity.Thue = dto.Thue;
+            entity.GhiChu = dto.GhiChu;
 
             await _context.SaveChangesAsync();
-
-            nguoiThucHien ??= "Unknown";
-            var giaTriMoi = JsonSerializer.Serialize(item);
-
-            var log = new AuditLog
-            {
-                TenBang = nameof(HoaDon),
-                IdBanGhi = item.Id,
-                HanhDong = "CapNhat",
-                GiaTriCu = giaTriCu,
-                GiaTriMoi = giaTriMoi,
-                NguoiThucHien = nguoiThucHien,
-                ThoiGian = DateTime.Now
-            };
-
-            _context.AuditLogs.Add(log);
-            await _context.SaveChangesAsync();
-
             return NoContent();
         }
-        [HttpPost("{id:int}/thanh-toan")]
-        public async Task<IActionResult> ThanhToanHoaDon(
-    int id,
-    HoaDonThanhToanDto dto,
-    [FromHeader(Name = "X-NguoiThucHien")] string? nguoiThucHien)
-        {
-            var hd = await _context.HoaDons.FindAsync(id);
-            if (hd == null) return NotFound();
 
-            var giaTriCu = JsonSerializer.Serialize(hd);
-
-            // cập nhật trạng thái hoá đơn
-            hd.TongTien = dto.TongTien;
-            hd.GiamGia = dto.GiamGia;
-            hd.Thue = dto.Thue;
-            hd.GhiChu = dto.GhiChu;
-            hd.TrangThai = 1;             // 1 = Paid
-            hd.ClosedAt = DateTime.Now;
-
-            await _context.SaveChangesAsync();
-
-            nguoiThucHien ??= "Unknown";
-            var giaTriMoi = JsonSerializer.Serialize(hd);
-
-            // ghi AuditLog giống các action khác 
-            var log = new AuditLog
-            {
-                TenBang = nameof(HoaDon),
-                IdBanGhi = hd.Id,
-                HanhDong = "ThanhToan",
-                GiaTriCu = giaTriCu,
-                GiaTriMoi = giaTriMoi,
-                NguoiThucHien = nguoiThucHien,
-                ThoiGian = DateTime.Now
-            };
-
-            _context.AuditLogs.Add(log);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-        [HttpGet("filter")]
-        public async Task<ActionResult<IEnumerable<HoaDon>>> GetByDateRange(
-    [FromQuery] DateTime? from,
-    [FromQuery] DateTime? to)
-        {
-            var query = _context.HoaDons.AsQueryable();
-
-            if (from.HasValue)
-                query = query.Where(h => h.CreatedAt >= from.Value);
-
-            if (to.HasValue)
-                query = query.Where(h => h.CreatedAt <= to.Value);
-
-            var data = await query
-                .OrderByDescending(h => h.CreatedAt)
-                .ToListAsync();
-
-            return Ok(data);
-        }
+        /// <summary>
+        /// Xoá hóa đơn.
+        /// </summary>
         [HttpDelete("{id:int}")]
-        public async Task<IActionResult> Delete(
-            int id,
-            [FromHeader(Name = "X-NguoiThucHien")] string? nguoiThucHien)
+        public async Task<IActionResult> Delete(int id)
         {
-            var item = await _context.HoaDons.FindAsync(id);
-            if (item == null) return NotFound();
+            var entity = await _context.HoaDons.FindAsync(id);
+            if (entity == null)
+                return NotFound();
 
-            var giaTriCu = JsonSerializer.Serialize(item);
-
-            _context.HoaDons.Remove(item);
+            _context.HoaDons.Remove(entity);
             await _context.SaveChangesAsync();
-
-            nguoiThucHien ??= "Unknown";
-
-            var log = new AuditLog
-            {
-                TenBang = nameof(HoaDon),
-                IdBanGhi = id,
-                HanhDong = "Xoa",
-                GiaTriCu = giaTriCu,
-                GiaTriMoi = null,
-                NguoiThucHien = nguoiThucHien,
-                ThoiGian = DateTime.Now
-            };
-
-            _context.AuditLogs.Add(log);
-            await _context.SaveChangesAsync();
-
             return NoContent();
-        }
-        [HttpGet("{id:int}/chi-tiet")]
-        public async Task<ActionResult<IEnumerable<ChiTietHoaDonDto>>> GetChiTiet(int id)
-        {
-            // id ở đây là DonGoiId (đơn gọi ứng với hoá đơn)
-            var data = await _context.ChiTietDonGois
-                .Where(c => c.DonGoiId == id)
-                .Select(c => new ChiTietHoaDonDto
-                {
-                    Id = c.Id,
-
-                    // Lấy tên món từ ThucUong hoặc ThucAn
-                    TenMon = c.ThucUongId != null && c.ThucUong != null
-                                ? c.ThucUong.Ten        // <-- dùng Ten
-                                : c.ThucAnId != null && c.ThucAn != null
-                                    ? c.ThucAn.Ten      // <-- dùng Ten
-                                    : "Món khác",
-
-                    // Phân loại để sau này WinForms hiển thị
-                    LoaiMon = c.ThucUongId != null ? "Thức uống"
-                             : c.ThucAnId != null ? "Thức ăn"
-                             : "Khác",
-
-                    SoLuong = c.SoLuong,
-                    DonGia = c.DonGia,
-                    ChietKhau = c.ChietKhau,
-                    ThanhTien = c.SoLuong * c.DonGia - c.ChietKhau
-                })
-                .ToListAsync();
-
-            return Ok(data);
         }
     }
-
 }

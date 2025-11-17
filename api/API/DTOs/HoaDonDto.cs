@@ -1,16 +1,22 @@
 ﻿namespace API.DTOs
 {
-    public class HoaDonCreateUpdateDto
+    public class HoaDonDto
     {
-        public string? MaHoaDon { get; set; }
-        public int NhanVienId { get; set; }
-        public int? BanId { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime? ClosedAt { get; set; }
-        public byte TrangThai { get; set; }       // 0=Open,1=Paid,2=Cancel
+        public int Id { get; set; }
+        public string MaHoaDon { get; set; } = string.Empty;
+
+        // Thời gian tạo / thời gian hiển thị trên lưới
+        public DateTime ThoiGian { get; set; }
+
+        // Các số tiền (nếu sau này muốn dùng)
         public decimal TongTien { get; set; }
         public decimal GiamGia { get; set; }
         public decimal Thue { get; set; }
-        public string? GhiChu { get; set; }
+
+        // = TongTien - GiamGia + Thue
+        public decimal ThanhTien { get; set; }
+
+        public string? TenNhanVien { get; set; }
+        public string? TenBan { get; set; }
     }
 }

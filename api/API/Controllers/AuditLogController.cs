@@ -1,4 +1,8 @@
-﻿using API.Models;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using API.DTOs;
+using API.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -17,49 +21,97 @@ namespace API.Controllers
             _context = context;
         }
 
-        // GET: api/AuditLog
+        // GET /api/AuditLog  -> lấy top mới nhất (có thể filter thêm bên WinForms)
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<AuditLog>>> GetAll()
+        public async Task<ActionResult<IEnumerable<AuditLogDto>>> GetAll()
         {
-            return await _context.AuditLogs
-                .OrderByDescending(l => l.ThoiGian)
+            var data = await _context.AuditLogs
+                .OrderByDescending(x => x.ThoiGian)
                 .ToListAsync();
+
+            var result = data.Select(x => new AuditLogDto
+            {
+                Id = x.Id,
+                TenBang = x.TenBang,
+                IdBanGhi = x.IdBanGhi,
+                HanhDong = x.HanhDong,
+                GiaTriCu = x.GiaTriCu,
+                GiaTriMoi = x.GiaTriMoi,
+                NguoiThucHien = x.NguoiThucHien,
+                ThoiGian = x.ThoiGian
+            }).ToList();
+
+            return Ok(result);
         }
 
-        // GET: api/AuditLog/5
+        // GET /api/AuditLog/{id}
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<AuditLog>> GetById(int id)
+        public async Task<ActionResult<AuditLogDto>> GetById(int id)
         {
             var log = await _context.AuditLogs.FindAsync(id);
             if (log == null) return NotFound();
-            return log;
+
+            var dto = new AuditLogDto
+            {
+                Id = log.Id,
+                TenBang = log.TenBang,
+                IdBanGhi = log.IdBanGhi,
+                HanhDong = log.HanhDong,
+                GiaTriCu = log.GiaTriCu,
+                GiaTriMoi = log.GiaTriMoi,
+                NguoiThucHien = log.NguoiThucHien,
+                ThoiGian = log.ThoiGian
+            };
+
+            return Ok(dto);
         }
 
-        // GET: api/AuditLog/search?tenBang=HoaDon&idBanGhi=1
+        // GET /api/AuditLog/search?keyword=...&from=yyyy-MM-dd&to=yyyy-MM-dd
         [HttpGet("search")]
-        public async Task<ActionResult<IEnumerable<AuditLog>>> Search(
-            [FromQuery] string? tenBang,
-            [FromQuery] int? idBanGhi,
-            [FromQuery] DateTime? tuNgay,
-            [FromQuery] DateTime? denNgay)
+        public async Task<ActionResult<IEnumerable<AuditLogDto>>> Search(
+            [FromQuery] AuditLogSearchRequest request)
         {
             var query = _context.AuditLogs.AsQueryable();
 
-            if (!string.IsNullOrWhiteSpace(tenBang))
-                query = query.Where(l => l.TenBang == tenBang);
+            if (!string.IsNullOrWhiteSpace(request.Keyword))
+            {
+                var kw = request.Keyword.Trim();
+                query = query.Where(x =>
+                    x.TenBang.Contains(kw) ||
+                    x.HanhDong.Contains(kw) ||
+                    (x.NguoiThucHien != null && x.NguoiThucHien.Contains(kw)));
+            }
 
-            if (idBanGhi.HasValue)
-                query = query.Where(l => l.IdBanGhi == idBanGhi.Value);
+            if (request.From.HasValue)
+            {
+                var fromDate = request.From.Value.Date;
+                query = query.Where(x => x.ThoiGian >= fromDate);
+            }
 
-            if (tuNgay.HasValue)
-                query = query.Where(l => l.ThoiGian >= tuNgay.Value);
+            if (request.To.HasValue)
+            {
+                // +1 ngày để lấy hết trong ngày To
+                var toDate = request.To.Value.Date.AddDays(1);
+                query = query.Where(x => x.ThoiGian < toDate);
+            }
 
-            if (denNgay.HasValue)
-                query = query.Where(l => l.ThoiGian <= denNgay.Value);
+            query = query.OrderByDescending(x => x.ThoiGian);
 
-            return await query
-                .OrderByDescending(l => l.ThoiGian)
-                .ToListAsync();
+            var data = await query.ToListAsync();
+
+            var result = data.Select(x => new AuditLogDto
+            {
+                Id = x.Id,
+                TenBang = x.TenBang,
+                IdBanGhi = x.IdBanGhi,
+                HanhDong = x.HanhDong,
+                GiaTriCu = x.GiaTriCu,
+                GiaTriMoi = x.GiaTriMoi,
+                NguoiThucHien = x.NguoiThucHien,
+                ThoiGian = x.ThoiGian
+            }).ToList();
+
+            return Ok(result);
         }
     }
 }
