@@ -74,7 +74,6 @@ C:\src\WINFORMS\Client-DoMInhKhoa\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Cli
 C:\src\WINFORMS\Client-DoMInhKhoa\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.dll
 C:\src\WINFORMS\Client-DoMInhKhoa\Client-DoMInhKhoa\obj\Debug\net8.0-windows\refint\Client-DoMInhKhoa.dll
 C:\src\WINFORMS\Client-DoMInhKhoa\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.pdb
-C:\src\WINFORMS\Client-DoMInhKhoa\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Images\p1.png
 C:\src\WINFORMS\Client-DoMInhKhoa\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.deps.json
 C:\src\WINFORMS\Client-DoMInhKhoa\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.runtimeconfig.json
 C:\src\WINFORMS\Client-DoMInhKhoa\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.pdb
