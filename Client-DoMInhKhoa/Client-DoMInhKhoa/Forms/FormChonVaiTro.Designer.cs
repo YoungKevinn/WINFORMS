@@ -17,112 +17,118 @@
 
         private void InitializeComponent()
         {
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.lblAppName = new System.Windows.Forms.Label();
-            this.lblSlogan = new System.Windows.Forms.Label();
-            this.panelRight = new System.Windows.Forms.Panel();
-            this.btnAdmin = new System.Windows.Forms.Button();
-            this.btnNhanVien = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.panelLeft.SuspendLayout();
-            this.panelRight.SuspendLayout();
-            this.SuspendLayout();
+            panelLeft = new Panel();
+            lblSlogan = new Label();
+            lblAppName = new Label();
+            panelRight = new Panel();
+            btnAdmin = new Button();
+            btnNhanVien = new Button();
+            lblTitle = new Label();
+            panelLeft.SuspendLayout();
+            panelRight.SuspendLayout();
+            SuspendLayout();
             // 
             // panelLeft
             // 
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(10, 25, 74);
-            this.panelLeft.Controls.Add(this.lblSlogan);
-            this.panelLeft.Controls.Add(this.lblAppName);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(260, 400);
-            this.panelLeft.TabIndex = 0;
-            // 
-            // lblAppName
-            // 
-            this.lblAppName.AutoSize = true;
-            this.lblAppName.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.lblAppName.ForeColor = System.Drawing.Color.White;
-            this.lblAppName.Location = new System.Drawing.Point(32, 40);
-            this.lblAppName.Name = "lblAppName";
-            this.lblAppName.Size = new System.Drawing.Size(164, 30);
-            this.lblAppName.TabIndex = 0;
-            this.lblAppName.Text = "Cafe Manager";
+            panelLeft.BackColor = Color.FromArgb(10, 25, 74);
+            panelLeft.Controls.Add(lblSlogan);
+            panelLeft.Controls.Add(lblAppName);
+            panelLeft.Dock = DockStyle.Left;
+            panelLeft.Location = new Point(0, 0);
+            panelLeft.Margin = new Padding(3, 4, 3, 4);
+            panelLeft.Name = "panelLeft";
+            panelLeft.Size = new Size(297, 533);
+            panelLeft.TabIndex = 0;
             // 
             // lblSlogan
             // 
-            this.lblSlogan.AutoSize = true;
-            this.lblSlogan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblSlogan.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblSlogan.Location = new System.Drawing.Point(35, 90);
-            this.lblSlogan.Name = "lblSlogan";
-            this.lblSlogan.Size = new System.Drawing.Size(184, 60);
-            this.lblSlogan.TabIndex = 1;
-            this.lblSlogan.Text = "Quản lý quán cà phê thông minh,\r\nnhanh và trực quan cho chủ quán.\r\n\r\n";
+            lblSlogan.AutoSize = true;
+            lblSlogan.Font = new Font("Segoe UI", 9F);
+            lblSlogan.ForeColor = Color.Gainsboro;
+            lblSlogan.Location = new Point(40, 120);
+            lblSlogan.Name = "lblSlogan";
+            lblSlogan.Size = new Size(230, 60);
+            lblSlogan.TabIndex = 1;
+            lblSlogan.Text = "Quản lý quán cà phê thông minh,\r\nnhanh và trực quan cho chủ quán.\r\n\r\n";
+            // 
+            // lblAppName
+            // 
+            lblAppName.AutoSize = true;
+            lblAppName.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
+            lblAppName.ForeColor = Color.White;
+            lblAppName.Location = new Point(37, 53);
+            lblAppName.Name = "lblAppName";
+            lblAppName.Size = new Size(187, 37);
+            lblAppName.TabIndex = 0;
+            lblAppName.Text = "Cafe Manager";
             // 
             // panelRight
             // 
-            this.panelRight.BackColor = System.Drawing.Color.White;
-            this.panelRight.Controls.Add(this.btnAdmin);
-            this.panelRight.Controls.Add(this.btnNhanVien);
-            this.panelRight.Controls.Add(this.lblTitle);
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRight.Location = new System.Drawing.Point(260, 0);
-            this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(440, 400);
-            this.panelRight.TabIndex = 1;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(10, 25, 74);
-            this.lblTitle.Location = new System.Drawing.Point(60, 60);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(272, 25);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Chọn chế độ sử dụng hệ thống";
-            // 
-            // btnNhanVien
-            // 
-            this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.btnNhanVien.Location = new System.Drawing.Point(64, 130);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Size = new System.Drawing.Size(310, 60);
-            this.btnNhanVien.TabIndex = 1;
-            this.btnNhanVien.Text = "Nhân viên bán hàng";
-            this.btnNhanVien.UseVisualStyleBackColor = true;
-            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            panelRight.BackColor = Color.White;
+            panelRight.Controls.Add(btnAdmin);
+            panelRight.Controls.Add(btnNhanVien);
+            panelRight.Controls.Add(lblTitle);
+            panelRight.Dock = DockStyle.Fill;
+            panelRight.Location = new Point(297, 0);
+            panelRight.Margin = new Padding(3, 4, 3, 4);
+            panelRight.Name = "panelRight";
+            panelRight.Size = new Size(503, 533);
+            panelRight.TabIndex = 1;
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.btnAdmin.Location = new System.Drawing.Point(64, 210);
-            this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(310, 60);
-            this.btnAdmin.TabIndex = 2;
-            this.btnAdmin.Text = "Quản trị Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
-            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            btnAdmin.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            btnAdmin.Location = new Point(73, 280);
+            btnAdmin.Margin = new Padding(3, 4, 3, 4);
+            btnAdmin.Name = "btnAdmin";
+            btnAdmin.Size = new Size(354, 80);
+            btnAdmin.TabIndex = 2;
+            btnAdmin.Text = "Quản trị Admin";
+            btnAdmin.UseVisualStyleBackColor = true;
+            btnAdmin.Click += btnAdmin_Click;
+            // 
+            // btnNhanVien
+            // 
+            btnNhanVien.BackColor = Color.White;
+            btnNhanVien.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
+            btnNhanVien.Location = new Point(73, 173);
+            btnNhanVien.Margin = new Padding(3, 4, 3, 4);
+            btnNhanVien.Name = "btnNhanVien";
+            btnNhanVien.Size = new Size(354, 80);
+            btnNhanVien.TabIndex = 1;
+            btnNhanVien.Text = "Nhân viên bán hàng";
+            btnNhanVien.UseVisualStyleBackColor = false;
+            btnNhanVien.Click += btnNhanVien_Click;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.FromArgb(10, 25, 74);
+            lblTitle.Location = new Point(69, 80);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(353, 32);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "Chọn chế độ sử dụng hệ thống";
             // 
             // FormChonVaiTro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(700, 400);
-            this.Controls.Add(this.panelRight);
-            this.Controls.Add(this.panelLeft);
-            this.MaximizeBox = false;
-            this.Name = "FormChonVaiTro";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cafe Manager - Chọn chế độ";
-            this.panelLeft.ResumeLayout(false);
-            this.panelLeft.PerformLayout();
-            this.panelRight.ResumeLayout(false);
-            this.panelRight.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(800, 533);
+            Controls.Add(panelRight);
+            Controls.Add(panelLeft);
+            Margin = new Padding(3, 4, 3, 4);
+            MaximizeBox = false;
+            Name = "FormChonVaiTro";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Cafe Manager - Chọn chế độ";
+            panelLeft.ResumeLayout(false);
+            panelLeft.PerformLayout();
+            panelRight.ResumeLayout(false);
+            panelRight.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
