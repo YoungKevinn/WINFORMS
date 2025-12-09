@@ -44,6 +44,8 @@ namespace API.Controllers
                 SoLuong = dto.SoLuong,
                 DonGia = dto.DonGia,
                 ChietKhau = dto.ChietKhau,
+
+                // ✅ map ghi chú món
                 GhiChu = dto.GhiChu
             };
 
@@ -85,6 +87,8 @@ namespace API.Controllers
             item.SoLuong = dto.SoLuong;
             item.DonGia = dto.DonGia;
             item.ChietKhau = dto.ChietKhau;
+
+            // ✅ cập nhật ghi chú món
             item.GhiChu = dto.GhiChu;
 
             await _context.SaveChangesAsync();

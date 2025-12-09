@@ -1,8 +1,7 @@
 ﻿using Client_DoMInhKhoa.Session;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +18,7 @@ namespace Client_DoMInhKhoa.Services
             _httpClient = new HttpClient
             {
                 // TODO: sửa lại cho đúng URL API của bạn
-                BaseAddress = new Uri("http://172.23.0.1:45455/"),
+                BaseAddress = new Uri("http://192.168.32.1:45455"),
                 Timeout = TimeSpan.FromSeconds(30)
             };
         }
@@ -86,6 +85,7 @@ namespace Client_DoMInhKhoa.Services
 
             return JsonConvert.DeserializeObject<T>(responseContent);
         }
+
         public static async Task<T> PutAsync<T>(string url, object data, bool includeAuth = true)
         {
             if (includeAuth)

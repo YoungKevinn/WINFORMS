@@ -2,12 +2,11 @@
 using API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json;
 
 namespace API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class BanController : ControllerBase
     {
         private readonly CafeDbContext _context;
@@ -17,25 +16,43 @@ namespace API.Controllers
             _context = context;
         }
 
+        // GET: api/Ban
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Ban>>> GetAll()
+        public async Task<ActionResult<IEnumerable<BanDto>>> GetAll()
         {
-            return await _context.Bans.ToListAsync();
+            var bans = await _context.Bans
+                .Select(b => new BanDto
+                {
+                    Id = b.Id,
+                    TenBan = b.TenBan,
+                    TrangThai = b.TrangThai
+                })
+                .ToListAsync();
+
+            return Ok(bans);
         }
 
-        [HttpGet("{id:int}")]
-        public async Task<ActionResult<Ban>> GetById(int id)
+        // GET: api/Ban/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<BanDto>> GetById(int id)
         {
             var ban = await _context.Bans.FindAsync(id);
             if (ban == null) return NotFound();
-            return ban;
+
+            return new BanDto
+            {
+                Id = ban.Id,
+                TenBan = ban.TenBan,
+                TrangThai = ban.TrangThai
+            };
         }
 
+        // POST: api/Ban
         [HttpPost]
-        public async Task<ActionResult<Ban>> Create(
-            BanCreateUpdateDto dto,
-            [FromHeader(Name = "X-NguoiThucHien")] string? nguoiThucHien)
+        public async Task<ActionResult<BanDto>> Create([FromBody] BanCreateUpdateDto dto)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var ban = new Ban
             {
                 TenBan = dto.TenBan,
@@ -45,89 +62,41 @@ namespace API.Controllers
             _context.Bans.Add(ban);
             await _context.SaveChangesAsync();
 
-            nguoiThucHien ??= "Unknown";
-
-            var log = new AuditLog
+            var result = new BanDto
             {
-                TenBang = nameof(Ban),
-                IdBanGhi = ban.Id,
-                HanhDong = "Tao",
-                GiaTriMoi = JsonSerializer.Serialize(ban),
-                NguoiThucHien = nguoiThucHien,
-                ThoiGian = DateTime.Now
+                Id = ban.Id,
+                TenBan = ban.TenBan,
+                TrangThai = ban.TrangThai
             };
 
-            _context.AuditLogs.Add(log);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetById), new { id = ban.Id }, ban);
+            return CreatedAtAction(nameof(GetById), new { id = ban.Id }, result);
         }
 
-        [HttpPut("{id:int}")]
-        public async Task<IActionResult> Update(
-            int id,
-            BanCreateUpdateDto dto,
-            [FromHeader(Name = "X-NguoiThucHien")] string? nguoiThucHien)
+        // PUT: api/Ban/5
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(int id, [FromBody] BanCreateUpdateDto dto)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var ban = await _context.Bans.FindAsync(id);
             if (ban == null) return NotFound();
-
-            var giaTriCu = JsonSerializer.Serialize(ban);
 
             ban.TenBan = dto.TenBan;
             ban.TrangThai = dto.TrangThai;
 
             await _context.SaveChangesAsync();
-
-            nguoiThucHien ??= "Unknown";
-            var giaTriMoi = JsonSerializer.Serialize(ban);
-
-            var log = new AuditLog
-            {
-                TenBang = nameof(Ban),
-                IdBanGhi = ban.Id,
-                HanhDong = "CapNhat",
-                GiaTriCu = giaTriCu,
-                GiaTriMoi = giaTriMoi,
-                NguoiThucHien = nguoiThucHien,
-                ThoiGian = DateTime.Now
-            };
-
-            _context.AuditLogs.Add(log);
-            await _context.SaveChangesAsync();
-
             return NoContent();
         }
 
-        [HttpDelete("{id:int}")]
-        public async Task<IActionResult> Delete(
-            int id,
-            [FromHeader(Name = "X-NguoiThucHien")] string? nguoiThucHien)
+        // DELETE: api/Ban/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(int id)
         {
             var ban = await _context.Bans.FindAsync(id);
             if (ban == null) return NotFound();
 
-            var giaTriCu = JsonSerializer.Serialize(ban);
-
             _context.Bans.Remove(ban);
             await _context.SaveChangesAsync();
-
-            nguoiThucHien ??= "Unknown";
-
-            var log = new AuditLog
-            {
-                TenBang = nameof(Ban),
-                IdBanGhi = id,
-                HanhDong = "Xoa",
-                GiaTriCu = giaTriCu,
-                GiaTriMoi = null,
-                NguoiThucHien = nguoiThucHien,
-                ThoiGian = DateTime.Now
-            };
-
-            _context.AuditLogs.Add(log);
-            await _context.SaveChangesAsync();
-
             return NoContent();
         }
     }

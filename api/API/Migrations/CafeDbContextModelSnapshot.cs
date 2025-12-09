@@ -70,8 +70,9 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("TrangThai")
-                        .HasColumnType("bit");
+                    b.Property<string>("TrangThai")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -382,7 +383,7 @@ namespace API.Migrations
             modelBuilder.Entity("API.Models.HoaDon", b =>
                 {
                     b.HasOne("API.Models.Ban", "Ban")
-                        .WithMany("HoaDons")
+                        .WithMany()
                         .HasForeignKey("BanId");
 
                     b.HasOne("API.Models.NhanVien", "NhanVien")
@@ -432,8 +433,6 @@ namespace API.Migrations
             modelBuilder.Entity("API.Models.Ban", b =>
                 {
                     b.Navigation("DonGois");
-
-                    b.Navigation("HoaDons");
                 });
 
             modelBuilder.Entity("API.Models.DanhMuc", b =>
