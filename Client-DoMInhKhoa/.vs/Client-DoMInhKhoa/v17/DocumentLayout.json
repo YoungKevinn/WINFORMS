@@ -1,29 +1,77 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\",
+  "WorkspaceRootPath": "D:\\WINFORMS\\Client-DoMInhKhoa\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|c:\\src\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formdangnhapadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formdangnhapadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formbanhangnhanvien.banvadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formbanhangnhanvien.banvadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|C:\\src\\WINFORMS\\Client-DoMInhKhoa\\client-dominhkhoa\\forms\\formchonvaitro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formchonvaitro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formbanhangnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formbanhangnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|c:\\src\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formdangnhapadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formdangnhapadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\VSSTUDIO2022\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|c:\\src\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formdangnhapadmin.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formdangnhapadmin.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formbanhangnhanvien.chitietdon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formbanhangnhanvien.chitietdon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formbanhangnhanvien.menumon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formbanhangnhanvien.menumon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|C:\\src\\WINFORMS\\Client-DoMInhKhoa\\client-dominhkhoa\\forms\\formdangnhapadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formdangnhapadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|D:\\WINFORMS\\Client-DoMInhKhoa\\client-dominhkhoa\\forms\\formbanhangnhanvien.menumon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formbanhangnhanvien.menumon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formbanhangnhanvien.layout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formbanhangnhanvien.layout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|D:\\WINFORMS\\Client-DoMInhKhoa\\client-dominhkhoa\\forms\\formbanhangnhanvien.layout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formbanhangnhanvien.layout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formquanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formquanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|D:\\WINFORMS\\Client-DoMInhKhoa\\client-dominhkhoa\\forms\\formquanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formquanlyban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\services\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formquanlymon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formquanlymon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formtrangchuadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formtrangchuadmin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|D:\\WINFORMS\\Client-DoMInhKhoa\\client-dominhkhoa\\forms\\formtrangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formtrangchuadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\services\\banservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\services\\banservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formnhanviendangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formnhanviendangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|d:\\winforms\\client-dominhkhoa\\client-dominhkhoa\\forms\\formquanlynhanvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formquanlynhanvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|D:\\WINFORMS\\Client-DoMInhKhoa\\client-dominhkhoa\\forms\\formquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{375678E6-5048-417F-8CBF-0B7564CCE212}|Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj|solutionrelative:client-dominhkhoa\\forms\\formquanlynhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,7 +81,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -44,83 +92,229 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d98f7c4d-b652-422c-bcdf-3d0e2b2da2c1}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormDangNhapAdmin.resx",
-              "DocumentMoniker": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.resx",
-              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.resx",
-              "ToolTip": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.resx",
-              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-19T03:14:08.919Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormDangNhapAdmin.cs",
-              "DocumentMoniker": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.cs",
-              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.cs",
-              "ToolTip": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.cs",
-              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAewDQAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T03:08:10.277Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormDangNhapAdmin.Designer.cs",
-              "DocumentMoniker": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.Designer.cs",
-              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.Designer.cs",
-              "ToolTip": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.Designer.cs",
-              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.Designer.cs",
-              "ViewState": "AgIAABsBAAAAAAAAAAAQwAsAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T03:08:00.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormChonVaiTro.cs [Design]",
-              "DocumentMoniker": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormChonVaiTro.cs",
-              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormChonVaiTro.cs",
-              "ToolTip": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormChonVaiTro.cs [Design]",
-              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormChonVaiTro.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T02:49:34.332Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAAUVAAAAAAAAAAAAwA4VAAAIAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\VSSTUDIO2022\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\VSSTUDIO2022\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "D:\\VSSTUDIO2022\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\VSSTUDIO2022\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAAGgNAAAAAAAAAAAuwH4NAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-11-19T03:08:57.437Z",
+              "WhenOpened": "2025-12-09T14:49:00.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "FormDangNhapAdmin.cs [Design]",
-              "DocumentMoniker": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.cs",
-              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.cs",
-              "ToolTip": "C:\\src\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.cs [Design]",
-              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormDangNhapAdmin.cs [Design]",
+              "Title": "FormBanHangNhanVien.MenuMon.cs [Design]",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.MenuMon.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.MenuMon.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.MenuMon.cs [Design]",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.MenuMon.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-19T03:07:56.526Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-09T14:31:05.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormBanHangNhanVien.ChiTietDon.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.ChiTietDon.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.ChiTietDon.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.ChiTietDon.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.ChiTietDon.cs",
+              "ViewState": "AgIAAJUCAAAAAAAAAAAcwL0CAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:17:55.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormBanHangNhanVien.BanVaDon.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.BanVaDon.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.BanVaDon.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.BanVaDon.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.BanVaDon.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAQwHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:16:03.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormBanHangNhanVien.MenuMon.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.MenuMon.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.MenuMon.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.MenuMon.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.MenuMon.cs",
+              "ViewState": "AgIAANsAAAAAAAAAAAAwwAIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:15:36.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormBanHangNhanVien.Layout.cs [Design]",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.Layout.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.Layout.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.Layout.cs [Design]",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.Layout.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:15:11.836Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormBanHangNhanVien.Layout.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.Layout.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.Layout.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.Layout.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.Layout.cs",
+              "ViewState": "AgIAADMBAAAAAAAAAAAwwF0BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T14:09:34.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormBanHangNhanVien.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormBanHangNhanVien.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T11:57:38.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormQuanLyBan.cs [Design]",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormQuanLyBan.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormQuanLyBan.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormQuanLyBan.cs [Design]",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormQuanLyBan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T11:52:40.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormQuanLyBan.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormQuanLyBan.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormQuanLyBan.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormQuanLyBan.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormQuanLyBan.cs",
+              "ViewState": "AgIAAJACAAAAAAAAAAAQwK0CAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T11:12:03.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FormTrangChuAdmin.Designer.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormTrangChuAdmin.Designer.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormTrangChuAdmin.Designer.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormTrangChuAdmin.Designer.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormTrangChuAdmin.Designer.cs",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T08:31:19.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FormTrangChuAdmin.cs [Design]",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormTrangChuAdmin.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormTrangChuAdmin.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormTrangChuAdmin.cs [Design]",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormTrangChuAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T08:31:16.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormQuanLyMon.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormQuanLyMon.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormQuanLyMon.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormQuanLyMon.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormQuanLyMon.cs",
+              "ViewState": "AgIAANUBAAAAAAAAAAAIwPEBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T08:24:13.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BanService.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Services\\BanService.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Services\\BanService.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Services\\BanService.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Services\\BanService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T20:28:26.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormNhanVienDangNhap.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormNhanVienDangNhap.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormNhanVienDangNhap.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormNhanVienDangNhap.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormNhanVienDangNhap.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAvwDgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T19:53:17.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "FormQuanLyNhanVien.Designer.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormQuanLyNhanVien.Designer.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormQuanLyNhanVien.Designer.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormQuanLyNhanVien.Designer.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormQuanLyNhanVien.Designer.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAA+wA0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T20:22:30.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FormQuanLyNhanVien.cs [Design]",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormQuanLyNhanVien.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Forms\\FormQuanLyNhanVien.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Forms\\FormQuanLyNhanVien.cs [Design]",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Forms\\FormQuanLyNhanVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T20:22:27.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApiClient.cs",
+              "DocumentMoniker": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Services\\ApiClient.cs",
+              "RelativeDocumentMoniker": "Client-DoMInhKhoa\\Services\\ApiClient.cs",
+              "ToolTip": "D:\\WINFORMS\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Services\\ApiClient.cs",
+              "RelativeToolTip": "Client-DoMInhKhoa\\Services\\ApiClient.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAIwIMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T18:44:48.731Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 131,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }

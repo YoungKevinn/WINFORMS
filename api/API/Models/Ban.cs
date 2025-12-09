@@ -3,10 +3,13 @@
     public class Ban
     {
         public int Id { get; set; }
-        public string TenBan { get; set; } = null!;
-        public bool TrangThai { get; set; }  // 0 = Free, 1 = Occupied
 
-        public ICollection<DonGoi>? DonGois { get; set; }
-        public ICollection<HoaDon>? HoaDons { get; set; }
+        public string TenBan { get; set; } = string.Empty;
+
+        // 0 = trống, 1 = đang dùng, 2 = đặt bàn
+        public int TrangThai { get; set; }
+
+        // nếu có navigation:
+        public ICollection<DonGoi> DonGois { get; set; } = new List<DonGoi>();
     }
 }

@@ -1,8 +1,11 @@
 ﻿namespace API.DTOs
 {
-    public class BanCreateUpdateDto
+    public class BanDto
     {
-        public string TenBan { get; set; } = null!;
-        public bool TrangThai { get; set; }   // false = trống, true = đang dùng
+        public int Id { get; set; }
+        public string TenBan { get; set; } = string.Empty;
+
+        // int, giống với entity
+        public int TrangThai { get; set; }
     }
 }

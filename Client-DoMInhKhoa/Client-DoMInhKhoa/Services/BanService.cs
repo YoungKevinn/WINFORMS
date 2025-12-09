@@ -4,32 +4,25 @@ using System.Threading.Tasks;
 
 namespace Client_DoMInhKhoa.Services
 {
-    public class BanService
+    public static class BanService
     {
-        public Task<List<BanDto>> GetAllAsync()
+        // Lấy danh sách bàn
+        public static Task<List<BanDto>> GetAllAsync()
         {
-            return ApiClient.GetAsync<List<BanDto>>("/api/Ban");
+            return ApiClient.GetAsync<List<BanDto>>("api/Ban");
         }
 
-        public Task<BanDto> GetByIdAsync(int id)
+        // Cập nhật trạng thái (true = đang dùng, false = trống)
+        public static Task UpdateTrangThaiAsync(int banId, bool trangThai)
         {
-            return ApiClient.GetAsync<BanDto>($"/api/Ban/{id}");
-        }
+            var dto = new
+            {
+                TenBan = "",      // server không dùng cũng được
+                TrangThai = trangThai
+            };
 
-        public Task<BanDto> CreateAsync(BanDto dto)
-        {
-            // includeAuth = true vì endpoint có khóa 🔒
-            return ApiClient.PostAsync<BanDto>("/api/Ban", dto, includeAuth: true);
-        }
-
-        public Task<BanDto> UpdateAsync(int id, BanDto dto)
-        {
-            return ApiClient.PutAsync<BanDto>($"/api/Ban/{id}", dto, includeAuth: true);
-        }
-
-        public Task DeleteAsync(int id)
-        {
-            return ApiClient.DeleteAsync($"/api/Ban/{id}", includeAuth: true);
+            // dùng PUT cùng endpoint Update của BanController
+            return ApiClient.PutAsync<string>($"api/Ban/{banId}", dto, includeAuth: true);
         }
     }
 }

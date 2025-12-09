@@ -17,12 +17,14 @@ namespace API.Controllers
             _context = context;
         }
 
+        // GET: api/DonGoi
         [HttpGet]
         public async Task<ActionResult<IEnumerable<DonGoi>>> GetAll()
         {
             return await _context.DonGois.ToListAsync();
         }
 
+        // GET: api/DonGoi/5
         [HttpGet("{id:int}")]
         public async Task<ActionResult<DonGoi>> GetById(int id)
         {
@@ -31,6 +33,7 @@ namespace API.Controllers
             return item;
         }
 
+        // POST: api/DonGoi
         [HttpPost]
         public async Task<ActionResult<DonGoi>> Create(
             DonGoiCreateUpdateDto dto,
@@ -43,6 +46,8 @@ namespace API.Controllers
                 TrangThai = dto.TrangThai,
                 MoLuc = dto.MoLuc == default ? DateTime.Now : dto.MoLuc,
                 DongLuc = dto.DongLuc,
+
+                // nhận ghi chú từ client
                 GhiChu = dto.GhiChu
             };
 
@@ -67,6 +72,7 @@ namespace API.Controllers
             return CreatedAtAction(nameof(GetById), new { id = item.Id }, item);
         }
 
+        // PUT: api/DonGoi/5
         [HttpPut("{id:int}")]
         public async Task<IActionResult> Update(
             int id,
@@ -83,6 +89,8 @@ namespace API.Controllers
             item.TrangThai = dto.TrangThai;
             item.MoLuc = dto.MoLuc;
             item.DongLuc = dto.DongLuc;
+
+            //  cập nhật ghi chú
             item.GhiChu = dto.GhiChu;
 
             await _context.SaveChangesAsync();
@@ -107,6 +115,7 @@ namespace API.Controllers
             return NoContent();
         }
 
+        // DELETE: api/DonGoi/5
         [HttpDelete("{id:int}")]
         public async Task<IActionResult> Delete(
             int id,
