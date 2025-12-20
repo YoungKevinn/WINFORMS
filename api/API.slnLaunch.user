@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "API\\API.csproj",
+        "Action": "StartWithoutDebugging",
+        "DebugTarget": "http"
+      },
+      {
+        "Path": "..\\Client-DoMInhKhoa\\Client-DoMInhKhoa\\Client-DoMInhKhoa.csproj",
+        "Action": "StartWithoutDebugging",
+        "DebugTarget": "Client-DoMInhKhoa"
+      }
+    ]
+  }
+]
