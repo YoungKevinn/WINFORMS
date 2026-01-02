@@ -206,5 +206,10 @@ namespace Client_DoMInhKhoa.Forms
             column.HeaderCell.SortGlyphDirection =
                 ascending ? SortOrder.Ascending : SortOrder.Descending;
         }
+       
+        private void dtpFrom_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

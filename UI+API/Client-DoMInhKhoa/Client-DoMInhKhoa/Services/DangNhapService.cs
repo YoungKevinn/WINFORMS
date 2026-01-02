@@ -1,20 +1,24 @@
 ﻿using Client_DoMInhKhoa.Models;
 using Client_DoMInhKhoa.Session;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Client_DoMInhKhoa.Services
 {
     public class DangNhapService
     {
-        // TODO: sửa endpoint này cho đúng với API của bạn
-        // Ví dụ: "api/auth/login" hoặc "api/admin-login"
-        private const string DangNhapEndpoint = "api/Auth/admin-login";
+        private const string AdminLoginEndpoint = "api/Auth/admin-login";
+        private const string EmployeeLoginEndpoint = "api/Auth/employee-login";
 
-        public async Task<DangNhapResponse> DangNhapAsync(string tenDangNhap, string matKhau)
+        // ✅ Giữ lại để FormDangNhapAdmin dùng (tránh CS1061)
+        public Task<DangNhapResponse> DangNhapAsync(string tenDangNhap, string matKhau)
+            => DangNhapCoreAsync(AdminLoginEndpoint, tenDangNhap, matKhau);
+
+        // ✅ Login nhân viên
+        public Task<DangNhapResponse> DangNhapNhanVienAsync(string tenDangNhap, string matKhau)
+            => DangNhapCoreAsync(EmployeeLoginEndpoint, tenDangNhap, matKhau);
+
+        private async Task<DangNhapResponse> DangNhapCoreAsync(string endpoint, string tenDangNhap, string matKhau)
         {
             var request = new DangNhapRequest
             {
@@ -22,24 +26,24 @@ namespace Client_DoMInhKhoa.Services
                 MatKhau = matKhau
             };
 
-            // Vì login chưa có token nên includeAuth = false
             var response = await ApiClient.PostAsync<DangNhapResponse>(
-                DangNhapEndpoint,
+                endpoint,
                 request,
                 includeAuth: false
             );
 
             if (response == null || string.IsNullOrEmpty(response.Token))
-            {
                 throw new Exception("Đăng nhập thất bại: không nhận được token.");
-            }
 
-            // Lưu session hiện tại
+            var usernameForSession = !string.IsNullOrWhiteSpace(response.TenDangNhap)
+                ? response.TenDangNhap
+                : tenDangNhap;
+
             SessionHienTai.SetSession(
                 response.Token,
-                response.TenDangNhap ?? tenDangNhap,
+                usernameForSession,
                 response.VaiTro,
-                response.HetHan
+                response.HetHanHopLe
             );
 
             return response;

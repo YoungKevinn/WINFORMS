@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Net.Http;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Client_DoMInhKhoa.Models;
 
@@ -7,35 +7,39 @@ namespace Client_DoMInhKhoa.Services
 {
     public class NhanVienService
     {
-        /// <summary>
-        /// Lấy thông tin nhân viên theo mã.
-        /// Trả về null nếu không tồn tại hoặc lỗi HTTP.
-        /// </summary>
-        public async Task<NhanVienDto?> LayTheoMaAsync(string maNhanVien)
-        {
-            if (string.IsNullOrWhiteSpace(maNhanVien))
-                return null;
+        public Task<List<NhanVienDto>> LayTatCaAsync()
+            => ApiClient.GetAsync<List<NhanVienDto>>("/api/NhanVien", includeAuth: true);
 
-            // TODO: CHỈNH LẠI URL CHO ĐÚNG VỚI API CỦA BẠN
-            // Ví dụ: GET /api/nhanvien/by-code/{maNhanVien}
-            var url = $"/api/NhanVien/by-code/{maNhanVien}";
+        public Task<NhanVienDto> TaoAsync(string maNv, string hoTen, string vaiTro)
+            => ApiClient.PostAsync<NhanVienDto>("/api/NhanVien", new
+            {
+                MaNhanVien = maNv,
+                HoTen = hoTen,
+                VaiTro = vaiTro
+            }, includeAuth: true);
 
-            try
+        public Task<string> SuaAsync(int id, string maNv, string hoTen, string vaiTro)
+            => ApiClient.PutAsync<string>($"/api/NhanVien/{id}", new
             {
-                // ApiClient là static class => gọi trực tiếp qua tên class
-                // Nếu hàm của bạn có thêm tham số (ví dụ bool includeAuth) thì truyền cho đúng
-                var nv = await ApiClient.GetAsync<NhanVienDto>(url);
+                MaNhanVien = maNv,
+                HoTen = hoTen,
+                VaiTro = vaiTro
+            }, includeAuth: true);
 
-                return nv;
-            }
-            catch (HttpRequestException)
+        // Soft delete => API sẽ set TrangThai=2
+        public Task XoaKhoaAsync(int id)
+            => ApiClient.DeleteAsync($"/api/NhanVien/{id}", includeAuth: true);
+
+        public Task<string> DatTrangThaiAsync(int id, int trangThai)
+            => ApiClient.PutAsync<string>($"/api/NhanVien/{id}/status", new
             {
-                return null;
-            }
-            catch (Exception)
+                TrangThai = trangThai
+            }, includeAuth: true);
+
+        public Task<string> ResetMatKhauAsync(int id, string matKhauMoi)
+            => ApiClient.PutAsync<string>($"/api/NhanVien/{id}/set-password", new
             {
-                throw;
-            }
-        }
+                MatKhauMoi = matKhauMoi
+            }, includeAuth: true);
     }
 }

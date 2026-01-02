@@ -70,9 +70,8 @@ namespace API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TrangThai")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("TrangThai")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -162,8 +161,8 @@ namespace API.Migrations
                     b.Property<int>("NhanVienId")
                         .HasColumnType("int");
 
-                    b.Property<byte>("TrangThai")
-                        .HasColumnType("tinyint");
+                    b.Property<int>("TrangThai")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -203,6 +202,9 @@ namespace API.Migrations
                     b.Property<int>("NhanVienId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("NhanVienId1")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("Thue")
                         .HasColumnType("decimal(18,2)");
 
@@ -218,6 +220,8 @@ namespace API.Migrations
 
                     b.HasIndex("NhanVienId");
 
+                    b.HasIndex("NhanVienId1");
+
                     b.ToTable("HoaDon", (string)null);
                 });
 
@@ -229,18 +233,30 @@ namespace API.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("FailedLoginCount")
+                        .HasColumnType("int");
+
                     b.Property<string>("HoTen")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime?>("LockoutEndUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("MaNhanVien")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MatKhauHash")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TenDangNhap")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TrangThai")
+                        .HasColumnType("int");
 
                     b.Property<string>("VaiTro")
                         .IsRequired()
@@ -387,10 +403,14 @@ namespace API.Migrations
                         .HasForeignKey("BanId");
 
                     b.HasOne("API.Models.NhanVien", "NhanVien")
-                        .WithMany("HoaDons")
+                        .WithMany()
                         .HasForeignKey("NhanVienId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("API.Models.NhanVien", null)
+                        .WithMany("HoaDons")
+                        .HasForeignKey("NhanVienId1");
 
                     b.Navigation("Ban");
 

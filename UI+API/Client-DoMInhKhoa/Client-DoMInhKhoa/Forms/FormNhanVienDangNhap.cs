@@ -1,32 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Client_DoMInhKhoa.Services;
+using Client_DoMInhKhoa.Models;
+
 namespace Client_DoMInhKhoa.Forms
 {
     public partial class FormNhanVienDangNhap : Form
     {
-        private readonly NhanVienService _nhanVienService;
+        private readonly DangNhapService _dangNhapService;
 
         public FormNhanVienDangNhap()
         {
             InitializeComponent();
-            _nhanVienService = new NhanVienService();
+            _dangNhapService = new DangNhapService();
+
+            txtMatKhau.KeyDown += TxtMatKhau_KeyDown;
+        }
+
+        private void TxtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnBatDauCa.PerformClick();
+            }
         }
 
         private async void btnBatDauCa_Click(object sender, EventArgs e)
         {
-            string maNv = txtMaNhanVien.Text.Trim();
+            string taiKhoan = txtMaNhanVien.Text.Trim();
+            string matKhau = txtMatKhau.Text;
 
-            if (string.IsNullOrEmpty(maNv))
+            if (string.IsNullOrEmpty(taiKhoan) || string.IsNullOrEmpty(matKhau))
             {
-                MessageBox.Show("Vui lòng nhập mã nhân viên.",
+                MessageBox.Show("Vui lòng nhập đầy đủ tài khoản và mật khẩu.",
                     "Thiếu thông tin",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -38,30 +44,33 @@ namespace Client_DoMInhKhoa.Forms
 
             try
             {
-                // Gọi API kiểm tra mã nhân viên
-                var nv = await _nhanVienService.LayTheoMaAsync(maNv);
-                if (nv == null)
+                // Login nhân viên
+                var result = await _dangNhapService.DangNhapNhanVienAsync(taiKhoan, matKhau);
+
+                // FormBanHangNhanVien yêu cầu NhanVienDto trong constructor
+                var nv = new NhanVienDto
                 {
-                    MessageBox.Show("Mã nhân viên không tồn tại hoặc đã ngừng hoạt động.",
-                        "Không hợp lệ",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                    return;
-                }
+                    MaNhanVien = taiKhoan,
+                    HoTen = result.HoTen ?? taiKhoan,
+                    VaiTro = string.IsNullOrWhiteSpace(result.VaiTro) ? "NhanVien" : result.VaiTro,
+                    DangHoatDong = true
+                };
 
-                // TODO: lưu thông tin nhân viên vào Session nếu có
-                // SessionHienTai.MaNhanVien = nv.MaNhanVien;
-                // SessionHienTai.TenNhanVien = nv.HoTen;
-
-                // Mở form bán hàng (dashboard cho nhân viên)
                 var formBanHang = new FormBanHangNhanVien(nv);
                 formBanHang.Show();
                 this.Hide();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Không thể kiểm tra mã nhân viên. Vui lòng thử lại sau.",
-                    "Lỗi hệ thống",
+                string message;
+
+                if (ex.Message.Contains("401") || ex.Message.Contains("Sai", StringComparison.OrdinalIgnoreCase))
+                    message = "Sai tài khoản hoặc mật khẩu.";
+                else
+                    message = "Không thể đăng nhập. Vui lòng kiểm tra kết nối hoặc thử lại sau.";
+
+                MessageBox.Show(message,
+                    "Đăng nhập thất bại",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }

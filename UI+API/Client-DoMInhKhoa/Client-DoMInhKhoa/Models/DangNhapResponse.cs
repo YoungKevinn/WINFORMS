@@ -1,20 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace Client_DoMInhKhoa.Models
 {
     public class DangNhapResponse
     {
-        public string Token { get; set; }
+        [JsonProperty("token")]
+        public string Token { get; set; } = string.Empty;
 
-        // Tùy API của bạn trả về gì thì đặt tên tương ứng
-        public string TenDangNhap { get; set; }
-        public string VaiTro { get; set; }
+        [JsonProperty("tenDangNhap")]
+        public string? TenDangNhap { get; set; }
 
-        // Nếu API không trả về ngày hết hạn thì có thể bỏ
-        public DateTime? HetHan { get; set; }
+        [JsonProperty("hoTen")]
+        public string? HoTen { get; set; }
+
+        [JsonProperty("vaiTro")]
+        public string VaiTro { get; set; } = string.Empty;
+
+        [JsonProperty("expiresAt")]
+        public DateTime? ExpiresAt { get; set; }
+
+        [JsonProperty("hetHan")]
+        public DateTime? HetHanServer { get; set; }
+
+        [JsonIgnore]
+        public DateTime? HetHanHopLe => ExpiresAt ?? HetHanServer;
     }
 }

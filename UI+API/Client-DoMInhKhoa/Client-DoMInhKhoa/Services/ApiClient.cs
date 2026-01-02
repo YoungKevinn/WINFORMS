@@ -10,7 +10,6 @@ namespace Client_DoMInhKhoa.Services
 {
     public static class ApiClient
     {
-        // HttpClient dùng chung cho cả app
         private static readonly HttpClient _httpClient;
 
         static ApiClient()
@@ -18,7 +17,7 @@ namespace Client_DoMInhKhoa.Services
             _httpClient = new HttpClient
             {
                 // TODO: sửa lại cho đúng URL API của bạn
-                BaseAddress = new Uri("http://192.168.32.1:45455"),
+                BaseAddress = new Uri("https://localhost:7072"),
                 Timeout = TimeSpan.FromSeconds(30)
             };
         }
@@ -50,13 +49,11 @@ namespace Client_DoMInhKhoa.Services
 
             if (!response.IsSuccessStatusCode)
             {
-                // Ở đây bạn có thể log thêm responseContent nếu muốn
                 throw new Exception($"Lỗi API ({(int)response.StatusCode}): {responseContent}");
             }
 
             if (typeof(T) == typeof(string))
             {
-                // Nếu muốn lấy string raw
                 return (T)(object)responseContent;
             }
 

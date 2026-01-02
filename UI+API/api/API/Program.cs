@@ -50,6 +50,10 @@ builder.Services.AddDbContext<CafeDbContext>(options =>
 // JWT config
 var jwtSection = builder.Configuration.GetSection("Jwt");
 var jwtKey = jwtSection["Key"];
+if (string.IsNullOrWhiteSpace(jwtKey) || Encoding.UTF8.GetByteCount(jwtKey) < 16)
+{
+    throw new InvalidOperationException("Jwt:Key phải tối thiểu 16 bytes (128 bits). Hãy đặt key dài và ngẫu nhiên trong appsettings hoặc ENV Jwt__Key.");
+}
 
 builder.Services.AddAuthentication(options =>
 {
@@ -89,7 +93,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseMiddleware<API.Security.IpRateLimitMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 

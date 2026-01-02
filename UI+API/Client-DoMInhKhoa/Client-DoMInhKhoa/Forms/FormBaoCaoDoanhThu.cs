@@ -1,11 +1,13 @@
-﻿using System;
+﻿using Client_DoMInhKhoa.Helpers;
+using Client_DoMInhKhoa.Models;
+using Client_DoMInhKhoa.Services;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Client_DoMInhKhoa.Models;
-using Client_DoMInhKhoa.Services;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Client_DoMInhKhoa.Forms
 {
@@ -104,6 +106,27 @@ namespace Client_DoMInhKhoa.Forms
             {
                 btnXemBaoCao.Enabled = true;
             }
+        }
+
+        private void btnXemBieuDo_Click(object sender, EventArgs e)
+        {
+            // Chưa tải dữ liệu -> yêu cầu bấm "Xem báo cáo" trước
+            if (_allTongQuan == null || _allTongQuan.Count == 0)
+            {
+                MessageBox.Show("Bạn hãy bấm \"Xem báo cáo\" trước để tải dữ liệu doanh thu.",
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                return;
+            }
+
+            var data = (_currentTongQuan != null && _currentTongQuan.Count > 0)
+                ? _currentTongQuan
+                : _allTongQuan;
+
+            using var f = new FormBieuDoDoanhThu(data, _currentKieuThongKe, dtpFrom.Value.Date, dtpTo.Value.Date);
+            f.StartPosition = FormStartPosition.CenterParent;
+            f.ShowDialog(this);
         }
 
         // ====== LỌC THEO Ô TÌM KIẾM CHUNG ======
@@ -315,7 +338,6 @@ namespace Client_DoMInhKhoa.Forms
                 col.DefaultCellStyle.FormatProvider = _viCulture;
             }
 
-            // Cho phép sort bằng code cho MỌI cột
             foreach (DataGridViewColumn col in dgvNhanVien.Columns)
             {
                 col.SortMode = DataGridViewColumnSortMode.Programmatic;
@@ -446,6 +468,207 @@ namespace Client_DoMInhKhoa.Forms
                     e.FormattingApplied = true;
                     break;
             }
+        }
+
+        private void btnXuatExcel_Click(object sender, EventArgs e)
+        {
+            // Nếu chưa có dữ liệu thì thôi
+            if ((_currentTongQuan == null || _currentTongQuan.Count == 0) &&
+                (_currentTheoNhanVien == null || _currentTheoNhanVien.Count == 0))
+            {
+                MessageBox.Show("Chưa có dữ liệu. Hãy bấm \"Xem báo cáo\" trước.", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Export theo tab đang xem
+            var isTongQuan = tabControl.SelectedTab == tabTongQuan;
+
+            var dgv = isTongQuan ? dgvTongQuan : dgvNhanVien;
+            var sheet = isTongQuan ? "DoanhThuTong" : "TheoNhanVien";
+            var title = isTongQuan ? "BÁO CÁO DOANH THU (TỔNG)" : "BÁO CÁO DOANH THU (THEO NHÂN VIÊN)";
+
+            decimal? tong = null;
+            if (isTongQuan && _currentTongQuan != null && _currentTongQuan.Count > 0)
+                tong = _currentTongQuan.Sum(x => x.TongTien);
+            else if (!isTongQuan && _currentTheoNhanVien != null && _currentTheoNhanVien.Count > 0)
+                tong = _currentTheoNhanVien.Sum(x => x.TongTien);
+
+            ExcelExporter.ExportDataGridViewToExcel(
+                dgv,
+                sheetName: sheet,
+                title: title,
+                fromDate: dtpFrom.Value.Date,
+                toDate: dtpTo.Value.Date,
+                totalRevenue: tong
+            );
+        }
+
+        internal sealed class FormBieuDoDoanhThu : Form
+        {
+            private readonly List<ThongKeDoanhThuDto> _data;
+            private readonly string _kieu;
+            private readonly DateTime _from;
+            private readonly DateTime _to;
+
+            private Chart _chart;
+            private Label _lblTitle;
+
+            public FormBieuDoDoanhThu(List<ThongKeDoanhThuDto> data, string kieu, DateTime from, DateTime to)
+            {
+                _data = data ?? new List<ThongKeDoanhThuDto>();
+                _kieu = string.IsNullOrWhiteSpace(kieu) ? "ngay" : kieu;
+                _from = from;
+                _to = to;
+
+                Text = "Biểu đồ doanh thu";
+                Width = 980;
+                Height = 560;
+                FormBorderStyle = FormBorderStyle.FixedDialog;
+                MaximizeBox = false;
+                MinimizeBox = false;
+
+                BuildUi();
+                DrawChart();
+            }
+
+            private void BuildUi()
+            {
+                _lblTitle = new Label
+                {
+                    Dock = DockStyle.Top,
+                    Height = 40,
+                    TextAlign = System.Drawing.ContentAlignment.MiddleLeft,
+                    Padding = new Padding(12, 0, 12, 0),
+                    Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold),
+                    Text = $"Doanh thu ({FormatKieu(_kieu)})  |  {_from:dd/MM/yyyy} → {_to:dd/MM/yyyy}"
+                };
+
+                _chart = new Chart { Dock = DockStyle.Fill };
+
+                var area = new ChartArea("main");
+                area.AxisX.Interval = 1;
+                area.AxisX.MajorGrid.Enabled = false;
+                area.AxisX.LabelStyle.Angle = -45;
+
+                area.AxisY.LabelStyle.Format = "N0";
+                area.AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Dash;
+
+                area.AxisY2.Enabled = AxisEnabled.True;
+                area.AxisY2.MajorGrid.Enabled = false;
+
+                _chart.ChartAreas.Add(area);
+                _chart.Legends.Add(new Legend("legend"));
+
+                var sRevenue = new Series("Doanh thu")
+                {
+                    ChartType = SeriesChartType.Column,
+                    ChartArea = "main",
+                    IsValueShownAsLabel = true,
+                    YValueType = ChartValueType.Double,
+                    LabelFormat = "N0"
+                };
+                sRevenue["PointWidth"] = "0.6";
+
+                var sInvoices = new Series("Số hóa đơn")
+                {
+                    ChartType = SeriesChartType.Line,
+                    ChartArea = "main",
+                    YAxisType = AxisType.Secondary,
+                    BorderWidth = 3,
+                    MarkerStyle = MarkerStyle.Circle,
+                    MarkerSize = 6,
+                    YValueType = ChartValueType.Int32
+                };
+
+                _chart.Series.Add(sRevenue);
+                _chart.Series.Add(sInvoices);
+
+                Controls.Add(_chart);
+                Controls.Add(_lblTitle);
+            }
+
+            private void DrawChart()
+            {
+                var sRevenue = _chart.Series["Doanh thu"];
+                var sInvoices = _chart.Series["Số hóa đơn"];
+                sRevenue.Points.Clear();
+                sInvoices.Points.Clear();
+
+                foreach (var item in _data.OrderBy(x => x.Ngay))
+                {
+                    var label = _kieu switch
+                    {
+                        "thang" => item.Ngay.ToString("MM/yyyy"),
+                        "nam" => item.Ngay.ToString("yyyy"),
+                        _ => item.Ngay.ToString("dd/MM")
+                    };
+
+                    var revenue = (double)GetRevenue(item);
+
+                    sRevenue.Points.AddXY(label, revenue);
+                    sInvoices.Points.AddXY(label, item.SoHoaDon);
+                }
+
+                _chart.ChartAreas[0].RecalculateAxesScale();
+            }
+
+            private static decimal GetRevenue(ThongKeDoanhThuDto x)
+            {
+                if (x == null) return 0m;
+
+                var p = x.GetType().GetProperty("DoanhThuThucTe");
+                if (p != null && p.PropertyType == typeof(decimal))
+                {
+                    var v = (decimal)(p.GetValue(x) ?? 0m);
+                    if (v != 0m) return v;
+                }
+
+                return x.TongTien;
+            }
+
+            private static string FormatKieu(string kieu)
+            {
+                return kieu switch
+                {
+                    "thang" => "Theo tháng",
+                    "nam" => "Theo năm",
+                    _ => "Theo ngày"
+                };
+            }
+        }
+
+        private void btnXuatPDF_Click(object sender, EventArgs e)
+        {
+
+            if ((_currentTongQuan == null || _currentTongQuan.Count == 0) &&
+      (_currentTheoNhanVien == null || _currentTheoNhanVien.Count == 0))
+            {
+                MessageBox.Show("Chưa có dữ liệu. Hãy bấm \"Xem báo cáo\" trước.", "Thông báo",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            bool isTongQuan = tabControl.SelectedTab == tabTongQuan;
+
+            var dgv = isTongQuan ? dgvTongQuan : dgvNhanVien;
+            var sheet = isTongQuan ? "DoanhThuTong" : "TheoNhanVien";
+            var title = isTongQuan ? "BÁO CÁO DOANH THU (TỔNG QUAN)" : "BÁO CÁO DOANH THU (THEO NHÂN VIÊN)";
+
+            decimal? tong = null;
+            if (isTongQuan && _currentTongQuan != null && _currentTongQuan.Count > 0)
+                tong = _currentTongQuan.Sum(x => x.TongTien);
+            else if (!isTongQuan && _currentTheoNhanVien != null && _currentTheoNhanVien.Count > 0)
+                tong = _currentTheoNhanVien.Sum(x => x.TongTien);
+
+            PdfExporter.ExportDataGridViewToPdf(
+                dgv,
+                title: title,
+                sheetName: sheet,
+                fromDate: dtpFrom.Value.Date,
+                toDate: dtpTo.Value.Date,
+                totalRevenue: tong
+            );
         }
     }
 }

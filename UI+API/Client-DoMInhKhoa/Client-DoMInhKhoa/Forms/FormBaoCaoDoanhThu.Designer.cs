@@ -15,6 +15,7 @@ namespace Client_DoMInhKhoa.Forms
         private Label lblKieu;
         private ComboBox cboKieuThongKe;
         private Button btnXemBaoCao;
+        private Button btnXemBieuDo;
         private TabControl tabControl;
         private TabPage tabTongQuan;
         private TabPage tabNhanVien;
@@ -50,12 +51,14 @@ namespace Client_DoMInhKhoa.Forms
             lblKieu = new Label();
             cboKieuThongKe = new ComboBox();
             btnXemBaoCao = new Button();
+            btnXemBieuDo = new Button();
             lblSearch = new Label();
             txtSearch = new TextBox();
             tabControl = new TabControl();
             tabTongQuan = new TabPage();
             dgvTongQuan = new DataGridView();
             panelSummaryTongQuan = new Panel();
+            btnXuatExcel = new Button();
             lblTongThu = new Label();
             lblSoHoaDon = new Label();
             tabNhanVien = new TabPage();
@@ -63,6 +66,7 @@ namespace Client_DoMInhKhoa.Forms
             panelSummaryNhanVien = new Panel();
             lblTongThuNhanVien = new Label();
             lblSoNhanVien = new Label();
+            btnXuatPDF = new Button();
             panelFilter.SuspendLayout();
             tabControl.SuspendLayout();
             tabTongQuan.SuspendLayout();
@@ -83,6 +87,7 @@ namespace Client_DoMInhKhoa.Forms
             panelFilter.Controls.Add(lblKieu);
             panelFilter.Controls.Add(cboKieuThongKe);
             panelFilter.Controls.Add(btnXemBaoCao);
+            panelFilter.Controls.Add(btnXemBieuDo);
             panelFilter.Controls.Add(lblSearch);
             panelFilter.Controls.Add(txtSearch);
             panelFilter.Dock = DockStyle.Top;
@@ -103,8 +108,8 @@ namespace Client_DoMInhKhoa.Forms
             // 
             // dtpFrom
             // 
-            dtpFrom.Format = DateTimePickerFormat.Custom;
             dtpFrom.CustomFormat = "dd/MM/yyyy";
+            dtpFrom.Format = DateTimePickerFormat.Custom;
             dtpFrom.Location = new Point(83, 14);
             dtpFrom.Name = "dtpFrom";
             dtpFrom.Size = new Size(110, 27);
@@ -121,8 +126,8 @@ namespace Client_DoMInhKhoa.Forms
             // 
             // dtpTo
             // 
-            dtpTo.Format = DateTimePickerFormat.Custom;
             dtpTo.CustomFormat = "dd/MM/yyyy";
+            dtpTo.Format = DateTimePickerFormat.Custom;
             dtpTo.Location = new Point(283, 14);
             dtpTo.Name = "dtpTo";
             dtpTo.Size = new Size(110, 27);
@@ -155,12 +160,22 @@ namespace Client_DoMInhKhoa.Forms
             btnXemBaoCao.UseVisualStyleBackColor = true;
             btnXemBaoCao.Click += btnXemBaoCao_Click;
             // 
+            // btnXemBieuDo
+            // 
+            btnXemBieuDo.Location = new Point(665, 44);
+            btnXemBieuDo.Name = "btnXemBieuDo";
+            btnXemBieuDo.Size = new Size(110, 28);
+            btnXemBieuDo.TabIndex = 9;
+            btnXemBieuDo.Text = "Xem biểu đồ";
+            btnXemBieuDo.UseVisualStyleBackColor = true;
+            btnXemBieuDo.Click += btnXemBieuDo_Click;
+            // 
             // lblSearch
             // 
             lblSearch.AutoSize = true;
             lblSearch.Location = new Point(15, 48);
             lblSearch.Name = "lblSearch";
-            lblSearch.Size = new Size(76, 20);
+            lblSearch.Size = new Size(73, 20);
             lblSearch.TabIndex = 7;
             lblSearch.Text = "Tìm kiếm:";
             // 
@@ -214,6 +229,8 @@ namespace Client_DoMInhKhoa.Forms
             // panelSummaryTongQuan
             // 
             panelSummaryTongQuan.BackColor = Color.WhiteSmoke;
+            panelSummaryTongQuan.Controls.Add(btnXuatPDF);
+            panelSummaryTongQuan.Controls.Add(btnXuatExcel);
             panelSummaryTongQuan.Controls.Add(lblTongThu);
             panelSummaryTongQuan.Controls.Add(lblSoHoaDon);
             panelSummaryTongQuan.Dock = DockStyle.Bottom;
@@ -221,6 +238,16 @@ namespace Client_DoMInhKhoa.Forms
             panelSummaryTongQuan.Name = "panelSummaryTongQuan";
             panelSummaryTongQuan.Size = new Size(786, 40);
             panelSummaryTongQuan.TabIndex = 1;
+            // 
+            // btnXuatExcel
+            // 
+            btnXuatExcel.Location = new Point(522, 8);
+            btnXuatExcel.Name = "btnXuatExcel";
+            btnXuatExcel.Size = new Size(108, 29);
+            btnXuatExcel.TabIndex = 2;
+            btnXuatExcel.Text = "Xuất Excel";
+            btnXuatExcel.UseVisualStyleBackColor = true;
+            btnXuatExcel.Click += btnXuatExcel_Click;
             // 
             // lblTongThu
             // 
@@ -297,6 +324,16 @@ namespace Client_DoMInhKhoa.Forms
             lblSoNhanVien.TabIndex = 1;
             lblSoNhanVien.Text = "Số nhân viên có HĐ: -";
             // 
+            // btnXuatPDF
+            // 
+            btnXuatPDF.Location = new Point(658, 6);
+            btnXuatPDF.Name = "btnXuatPDF";
+            btnXuatPDF.Size = new Size(108, 29);
+            btnXuatPDF.TabIndex = 3;
+            btnXuatPDF.Text = "Xuất PDF";
+            btnXuatPDF.UseVisualStyleBackColor = true;
+            btnXuatPDF.Click += btnXuatPDF_Click;
+            // 
             // FormBaoCaoDoanhThu
             // 
             ClientSize = new Size(800, 500);
@@ -318,5 +355,7 @@ namespace Client_DoMInhKhoa.Forms
             panelSummaryNhanVien.PerformLayout();
             ResumeLayout(false);
         }
+        private Button btnXuatExcel;
+        private Button btnXuatPDF;
     }
 }

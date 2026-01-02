@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Client_DoMInhKhoa.Session
 {
     public static class SessionHienTai
     {
-        public static string JwtToken { get; private set; }
-        public static string TenDangNhap { get; private set; }
-        public static string VaiTro { get; private set; }
+        public static string? JwtToken { get; private set; }
+        public static string? TenDangNhap { get; private set; }
+        public static string? VaiTro { get; private set; }
         public static DateTime? HetHan { get; private set; }
 
         public static bool DaDangNhap =>
