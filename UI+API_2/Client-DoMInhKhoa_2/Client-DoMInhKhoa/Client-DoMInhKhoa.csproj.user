@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Form\FormBanHangNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormBanHangNhanVien.MenuMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormBaoCaoDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormChonThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormChonVaiTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormDangNhapAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormHoaDonTam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormNhanVienDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormNhanVienEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormNhatKyHeThong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormQuanLyBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormQuanLyDanhMuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormQuanLyMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormThanhToanQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormThanhToanTungPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormTraCuuHoaDonAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form\FormTrangChuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

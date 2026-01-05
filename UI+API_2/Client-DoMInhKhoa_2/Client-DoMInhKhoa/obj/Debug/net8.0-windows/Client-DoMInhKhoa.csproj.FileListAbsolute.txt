@@ -1,0 +1,256 @@
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.csproj.AssemblyReference.cache
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Black.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-BlackItalic.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Bold.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-BoldItalic.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraBold.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraBoldItalic.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraLight.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraLightItalic.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Italic.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Light.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-LightItalic.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Medium.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-MediumItalic.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Regular.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-SemiBold.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-SemiBoldItalic.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Thin.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-ThinItalic.ttf
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\OFL.txt
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.exe
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Images\p2.png
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.deps.json
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.runtimeconfig.json
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.pdb
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Azure.Core.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Azure.Identity.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\ClosedXML.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.BarCodes.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.Charting.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.Cryptography.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.Quality.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.Shared.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.Snippets.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.System.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.WPFonts.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\QuestPDF.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\RBush.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\System.IO.Packaging.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libQuestPdfSkia.so
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libqpdf.so
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libQuestPdfSkia.so
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libqpdf.so
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libQuestPdfSkia.so
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libqpdf.so
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libQuestPdfSkia.dylib
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libqpdf.dylib
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libQuestPdfSkia.dylib
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libqpdf.dylib
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\QuestPdfSkia.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\libgcc_s_seh-1.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\libstdc++-6.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\libwinpthread-1.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\qpdf.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\zlib1.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\QuestPdfSkia.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\libgcc_s_dw2-1.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\libstdc++-6.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\libwinpthread-1.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\qpdf.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\zlib1.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormBanHangNhanVien.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormBaoCaoDoanhThu.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormChonThanhToan.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormChonVaiTro.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormDangNhapAdmin.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormDoiMatKhau.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormHoaDon.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormHoaDonTam.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormNhanVienDangNhap.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormNhanVienEdit.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormNhatKyHeThong.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormQuanLyBan.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormQuanLyDanhMuc.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormQuanLyMon.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormQuanLyNhanVien.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormThanhToanQR.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormThanhToanTungPhan.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormTraCuuHoaDonAdmin.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormTrangChuAdmin.resources
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.csproj.GenerateResource.cache
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.GeneratedMSBuildEditorConfig.editorconfig
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.AssemblyInfoInputs.cache
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.AssemblyInfo.cs
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.csproj.CoreCompileInputs.cache
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.sourcelink.json
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-D.F8866619.Up2Date
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\refint\Client-DoMInhKhoa.dll
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.pdb
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.genruntimeconfig.cache
+D:\WINFORMS\UI+API\FIX UI\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\ref\Client-DoMInhKhoa.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Black.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-BlackItalic.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Bold.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-BoldItalic.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraBold.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraBoldItalic.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraLight.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-ExtraLightItalic.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Italic.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Light.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-LightItalic.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Medium.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-MediumItalic.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Regular.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-SemiBold.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-SemiBoldItalic.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-Thin.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\Lato-ThinItalic.ttf
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\LatoFont\OFL.txt
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.exe
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Images\p2.png
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.deps.json
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.runtimeconfig.json
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Client-DoMInhKhoa.pdb
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Azure.Core.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Azure.Identity.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\ClosedXML.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\System.Windows.Forms.DataVisualization.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.BarCodes.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.Charting.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.Cryptography.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.Quality.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.Shared.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.Snippets.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.System.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.WPFonts.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\PdfSharp.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\QuestPDF.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\RBush.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\System.IO.Packaging.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libQuestPdfSkia.so
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-arm64\native\libqpdf.so
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libQuestPdfSkia.so
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-musl-x64\native\libqpdf.so
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libQuestPdfSkia.so
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\linux-x64\native\libqpdf.so
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libQuestPdfSkia.dylib
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\osx-arm64\native\libqpdf.dylib
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libQuestPdfSkia.dylib
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\osx-x64\native\libqpdf.dylib
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\QuestPdfSkia.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\libgcc_s_seh-1.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\libstdc++-6.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\libwinpthread-1.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\qpdf.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x64\native\zlib1.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\QuestPdfSkia.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\libgcc_s_dw2-1.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\libstdc++-6.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\libwinpthread-1.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\qpdf.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win-x86\native\zlib1.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.csproj.AssemblyReference.cache
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormBanHangNhanVien.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormBaoCaoDoanhThu.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormChonThanhToan.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormChonVaiTro.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormDangNhapAdmin.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormDoiMatKhau.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormHoaDon.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormHoaDonTam.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormNhanVienDangNhap.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormNhanVienEdit.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormNhatKyHeThong.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormQuanLyBan.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormQuanLyDanhMuc.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormQuanLyMon.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormQuanLyNhanVien.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormThanhToanQR.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormThanhToanTungPhan.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormTraCuuHoaDonAdmin.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client_DoMInhKhoa.Forms.FormTrangChuAdmin.resources
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.csproj.GenerateResource.cache
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.GeneratedMSBuildEditorConfig.editorconfig
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.AssemblyInfoInputs.cache
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.AssemblyInfo.cs
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.csproj.CoreCompileInputs.cache
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.sourcelink.json
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-D.F8866619.Up2Date
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\refint\Client-DoMInhKhoa.dll
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.pdb
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\Client-DoMInhKhoa.genruntimeconfig.cache
+D:\WINFORMS\UI+API_2\Client-DoMInhKhoa_2\Client-DoMInhKhoa\obj\Debug\net8.0-windows\ref\Client-DoMInhKhoa.dll
