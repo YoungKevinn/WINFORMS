@@ -20,6 +20,9 @@ namespace Client_DoMInhKhoa.Models
         [JsonProperty("expiresAt")]
         public DateTime? ExpiresAt { get; set; }
 
+        [JsonProperty("mustChangePassword")]
+        public bool MustChangePassword { get; set; }
+
         [JsonProperty("hetHan")]
         public DateTime? HetHanServer { get; set; }
 

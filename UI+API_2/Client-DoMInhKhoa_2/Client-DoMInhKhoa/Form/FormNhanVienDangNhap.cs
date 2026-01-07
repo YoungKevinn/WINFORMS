@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
 using Client_DoMInhKhoa.Services;
 using Client_DoMInhKhoa.Models;
+using Client_DoMInhKhoa.Session;
 
 namespace Client_DoMInhKhoa.Forms
 {
     public partial class FormNhanVienDangNhap : Form
     {
         private readonly DangNhapService _dangNhapService;
-        private bool _loginSucceeded = false;
 
         public FormNhanVienDangNhap()
         {
@@ -17,26 +16,6 @@ namespace Client_DoMInhKhoa.Forms
             _dangNhapService = new DangNhapService();
 
             txtMatKhau.KeyDown += TxtMatKhau_KeyDown;
-
-            // ✅ Nếu đóng form login NV mà CHƯA login thành công -> hiện lại FormChonVaiTro
-            this.FormClosed += (_, __) =>
-            {
-                if (!_loginSucceeded) ShowChonVaiTro();
-            };
-        }
-
-        private void ShowChonVaiTro()
-        {
-            var f = Application.OpenForms.OfType<FormChonVaiTro>().FirstOrDefault();
-            if (f == null || f.IsDisposed)
-                f = new FormChonVaiTro();
-
-            f.Show();
-            if (f.WindowState == FormWindowState.Minimized)
-                f.WindowState = FormWindowState.Normal;
-
-            f.BringToFront();
-            f.Activate();
         }
 
         private void TxtMatKhau_KeyDown(object sender, KeyEventArgs e)
@@ -66,6 +45,34 @@ namespace Client_DoMInhKhoa.Forms
             {
                 var result = await _dangNhapService.DangNhapNhanVienAsync(taiKhoan, matKhau);
 
+                if (result.MustChangePassword)
+                {
+                    MessageBox.Show(
+                        "Vui lòng đổi mật khẩu ngay để tiếp tục sử dụng hệ thống.",
+                        "Bắt buộc đổi mật khẩu",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+
+                    using (var f = new FormDoiMatKhau(batBuoc: true))
+                    {
+                        f.ShowDialog(this);
+
+                        if (f.ChangedSuccessfully)
+                        {
+                            SessionHienTai.Clear();
+                            MessageBox.Show(
+                                "Đổi mật khẩu thành công. Vui lòng đăng nhập lại bằng mật khẩu mới.",
+                                "Thành công",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                        }
+                    }
+
+                    txtMatKhau.Clear();
+                    txtMatKhau.Focus();
+                    return;
+                }
+
                 var nv = new NhanVienDto
                 {
                     MaNhanVien = taiKhoan,
@@ -74,14 +81,9 @@ namespace Client_DoMInhKhoa.Forms
                     DangHoatDong = true
                 };
 
-                _loginSucceeded = true;
-
                 var formBanHang = new FormBanHangNhanVien(nv);
                 formBanHang.Show();
-
-                // ✅ đóng form login NV để không nằm ẩn trong background
                 this.Hide();
-                BeginInvoke(new Action(() => this.Close()));
             }
             catch (Exception ex)
             {
@@ -106,8 +108,9 @@ namespace Client_DoMInhKhoa.Forms
 
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
-            ShowChonVaiTro();
-            this.Close();
+            var f = new FormChonVaiTro();
+            f.Show();
+            this.Hide();
         }
     }
 }

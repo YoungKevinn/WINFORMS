@@ -1,12 +1,5 @@
 ﻿using Client_DoMInhKhoa.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Client_DoMInhKhoa.Forms
@@ -15,10 +8,44 @@ namespace Client_DoMInhKhoa.Forms
     {
         private readonly TaiKhoanService _taiKhoanService;
 
-        public FormDoiMatKhau()
+        private readonly bool _batBuoc;
+        public bool ChangedSuccessfully { get; private set; }
+
+        public FormDoiMatKhau(bool batBuoc = false)
         {
             InitializeComponent();
             _taiKhoanService = new TaiKhoanService();
+
+            _batBuoc = batBuoc;
+            this.FormClosing += FormDoiMatKhau_FormClosing;
+
+            if (_batBuoc)
+            {
+                this.Text = "Đổi mật khẩu (bắt buộc)";
+                txtMatKhauCu.Text = "123456";
+                txtMatKhauCu.ReadOnly = true;
+                btnHuy.Visible = false;
+            }
+        }
+
+        private void FormDoiMatKhau_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_batBuoc && !ChangedSuccessfully)
+            {
+                var r = MessageBox.Show(
+                    "Bạn phải đổi mật khẩu để tiếp tục sử dụng hệ thống.\nBạn có muốn thoát ứng dụng không?",
+                    "Bắt buộc đổi mật khẩu",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+                if (r == DialogResult.Yes)
+                {
+                    Application.Exit();
+                    return;
+                }
+
+                e.Cancel = true;
+            }
         }
 
         private async void btnLuu_Click(object sender, EventArgs e)
@@ -68,6 +95,8 @@ namespace Client_DoMInhKhoa.Forms
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
+                ChangedSuccessfully = true;
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             catch (Exception ex)

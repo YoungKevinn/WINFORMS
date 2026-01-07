@@ -184,23 +184,8 @@ namespace API.Controllers
 
             return Ok(new { message = "Tạo admin thành công", nv.Id, nv.HoTen });
         }
-        // Lock policy
-        private const int MaxFailedLogin = 5;
-        private static readonly TimeSpan LockDuration = TimeSpan.FromMinutes(15);
 
-        private static bool IsTemporarilyLocked(API.Models.NhanVien user, out TimeSpan remaining)
-        {
-            remaining = TimeSpan.Zero;
-
-            if (user.LockoutEndUtc == null) return false;
-
-            var now = DateTime.UtcNow;
-            if (user.LockoutEndUtc.Value <= now) return false;
-
-            remaining = user.LockoutEndUtc.Value - now;
-            return true;
-        }
-
+        // Đăng nhập admin -> trả JWT
         [HttpPost("admin-login")]
         public async Task<ActionResult<AuthResponseDto>> AdminLogin(AdminLoginDto dto)
         {
@@ -211,46 +196,44 @@ namespace API.Controllers
 
             if (user == null || string.IsNullOrEmpty(user.MatKhauHash))
             {
-                await TryWriteAuthFailAggregateAsync("AdminLoginFailed", user?.Id, dto.TenDangNhap, dto.TenDangNhap, "UserNotFoundOrNotAdmin", ip);
+                await TryWriteAuthFailAggregateAsync(
+                    "AdminLoginFailed",
+                    user?.Id,
+                    dto.TenDangNhap,
+                    dto.TenDangNhap,
+                    "UserNotFoundOrNotAdmin",
+                    ip
+                );
                 return Unauthorized("Sai tài khoản hoặc không có quyền admin.");
             }
-
-            if (user.TrangThai == 2)
-                return StatusCode(423, "Tài khoản đã bị khóa.");
-
-            if (IsTemporarilyLocked(user, out var remain))
-                return StatusCode(423, $"Tài khoản đang bị khóa tạm. Thử lại sau {Math.Ceiling(remain.TotalMinutes)} phút.");
 
             var ok = PasswordHasher.VerifyPassword(dto.MatKhau, user.MatKhauHash);
             if (!ok)
             {
-                user.FailedLoginCount += 1;
-
-                if (user.FailedLoginCount >= MaxFailedLogin)
-                {
-                    user.LockoutEndUtc = DateTime.UtcNow.Add(LockDuration);
-                    user.FailedLoginCount = 0; // reset để window sau tính lại
-                }
-
-                await _context.SaveChangesAsync();
-
-                await TryWriteAuthFailAggregateAsync("AdminLoginFailed", user.Id, user.TenDangNhap, dto.TenDangNhap, "WrongPassword", ip);
+                await TryWriteAuthFailAggregateAsync(
+                    "AdminLoginFailed",
+                    user.Id,
+                    user.TenDangNhap,
+                    dto.TenDangNhap,
+                    "WrongPassword",
+                    ip
+                );
                 return Unauthorized("Sai mật khẩu.");
             }
 
-            user.FailedLoginCount = 0;
-            user.LockoutEndUtc = null;
-            await _context.SaveChangesAsync();
-
             var token = GenerateJwtToken(user);
 
-            await TryWriteAuditAsync(NewAuthLog("AdminLoginSuccess", user.Id, user.TenDangNhap,
-                new { user.TenDangNhap, user.HoTen, user.MaNhanVien, user.VaiTro, Ip = ip }));
+            await TryWriteAuditAsync(NewAuthLog(
+                "AdminLoginSuccess",
+                user.Id,
+                user.TenDangNhap,
+                new { user.TenDangNhap, user.HoTen, user.MaNhanVien, user.VaiTro, Ip = ip }
+            ));
 
             return Ok(token);
         }
 
-
+        // Đăng nhập nhân viên -> trả JWT (cho phép nhập MaNhanVien hoặc TenDangNhap)
         [HttpPost("employee-login")]
         public async Task<ActionResult<AuthResponseDto>> EmployeeLogin(AdminLoginDto dto)
         {
@@ -262,43 +245,43 @@ namespace API.Controllers
 
             if (user == null || string.IsNullOrEmpty(user.MatKhauHash))
             {
-                await TryWriteAuthFailAggregateAsync("EmployeeLoginFailed", user?.Id, dto.TenDangNhap, dto.TenDangNhap, "UserNotFoundOrNotEmployee", ip);
+                await TryWriteAuthFailAggregateAsync(
+                    "EmployeeLoginFailed",
+                    user?.Id,
+                    dto.TenDangNhap,
+                    dto.TenDangNhap,
+                    "UserNotFoundOrNotEmployee",
+                    ip
+                );
                 return Unauthorized("Sai tài khoản hoặc không có quyền nhân viên.");
             }
-
-            if (user.TrangThai == 2)
-                return StatusCode(423, "Tài khoản đã bị khóa.");
-
-            if (IsTemporarilyLocked(user, out var remain))
-                return StatusCode(423, $"Tài khoản đang bị khóa tạm. Thử lại sau {Math.Ceiling(remain.TotalMinutes)} phút.");
 
             var ok = PasswordHasher.VerifyPassword(dto.MatKhau, user.MatKhauHash);
             if (!ok)
             {
-                user.FailedLoginCount += 1;
-
-                if (user.FailedLoginCount >= MaxFailedLogin)
-                {
-                    user.LockoutEndUtc = DateTime.UtcNow.Add(LockDuration);
-                    user.FailedLoginCount = 0;
-                }
-
-                await _context.SaveChangesAsync();
-
-                await TryWriteAuthFailAggregateAsync("EmployeeLoginFailed", user.Id, user.TenDangNhap ?? user.MaNhanVien,
-                    dto.TenDangNhap, "WrongPassword", ip);
-
+                await TryWriteAuthFailAggregateAsync(
+                    "EmployeeLoginFailed",
+                    user.Id,
+                    user.TenDangNhap ?? user.MaNhanVien,
+                    dto.TenDangNhap,
+                    "WrongPassword",
+                    ip
+                );
                 return Unauthorized("Sai mật khẩu.");
             }
 
-            user.FailedLoginCount = 0;
-            user.LockoutEndUtc = null;
-            await _context.SaveChangesAsync();
-
             var token = GenerateJwtToken(user);
 
-            await TryWriteAuditAsync(NewAuthLog("EmployeeLoginSuccess", user.Id, user.TenDangNhap ?? user.MaNhanVien,
-                new { user.TenDangNhap, user.MaNhanVien, user.HoTen, user.VaiTro, Ip = ip }));
+            
+            var isDefaultPassword = dto.MatKhau == "123456" && PasswordHasher.VerifyPassword("123456", user.MatKhauHash);
+            token.MustChangePassword = isDefaultPassword;
+
+            await TryWriteAuditAsync(NewAuthLog(
+                "EmployeeLoginSuccess",
+                user.Id,
+                user.TenDangNhap ?? user.MaNhanVien,
+                new { user.TenDangNhap, user.MaNhanVien, user.HoTen, user.VaiTro, Ip = ip }
+            ));
 
             return Ok(token);
         }

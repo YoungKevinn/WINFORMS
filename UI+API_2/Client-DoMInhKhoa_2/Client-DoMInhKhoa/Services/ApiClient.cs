@@ -16,7 +16,6 @@ namespace Client_DoMInhKhoa.Services
         {
             _httpClient = new HttpClient
             {
-                // TODO: sửa lại cho đúng URL API của bạn
                 BaseAddress = new Uri("https://localhost:7072"),
                 Timeout = TimeSpan.FromSeconds(30)
             };
